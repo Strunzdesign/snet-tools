@@ -55,6 +55,7 @@ public:
     size_t Deserialize(const std::vector<unsigned char>& a_Buffer) {
         size_t l_Offset = SnetPacket::Deserialize(a_Buffer);
         if (l_Offset) {
+            if ((a_Buffer.size() - l_Offset) < 5) { return 0; }
             if (a_Buffer[l_Offset + 0] != 0x00) { return 0; }
             m_SrcServiceId = a_Buffer[l_Offset + 1];
             m_DstServiceId = a_Buffer[l_Offset + 2];
