@@ -60,6 +60,7 @@ public:
                 m_LocalSeqNbr   = (uint32_t(a_Buffer[l_Offset + 12]) << 24);
                 m_LocalSeqNbr  += (uint32_t(a_Buffer[l_Offset + 13]) << 16);
                 m_LocalSeqNbr  += (uint32_t(a_Buffer[l_Offset + 14]) <<  8);
+                m_LocalSeqNbr  += (uint32_t(a_Buffer[l_Offset + 15]));
                 l_Offset += 16;
             } // else
         } // if
