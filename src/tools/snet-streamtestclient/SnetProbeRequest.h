@@ -23,11 +23,11 @@
 #define SNET_PROBE_REQUEST_H
 
 #include <vector>
-#include "SnetPacket.h"
+#include "SnetAppMessage.h"
 
-class SnetProbeRequest: public SnetServiceMessage {
+class SnetProbeRequest: public SnetAppMessage {
 public:
-    SnetProbeRequest(uint16_t a_UnicastSSA): SnetServiceMessage(0x22, 0x22, 0x00, 0x4000, a_UnicastSSA, true), m_LocalSeed(0), m_LocalSeqNbr(0) {}
+    SnetProbeRequest(uint16_t a_UnicastSSA): SnetAppMessage(0x22, 0x22, 0x00, 0x4000, a_UnicastSSA, true), m_LocalSeed(0), m_LocalSeqNbr(0) {}
     
     // Setters
     void SetLocalSeed  (uint32_t a_LocalSeed   = 0) { m_LocalSeed   = a_LocalSeed; }
@@ -35,8 +35,8 @@ public:
 
     // Serializer
     std::vector<unsigned char> Serialize() const {
-        // Skip the serializer of SnetServiceMessage, we control the payload ourselves
-        std::vector<unsigned char> l_Buffer(SnetApplicationMessage::Serialize());
+        // Skip the serializer of SnetAppMessage, we control the payload ourselves
+        std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());
         l_Buffer.emplace_back((m_LocalSeed   & 0xFF000000) >> 24);
         l_Buffer.emplace_back((m_LocalSeed   & 0x00FF0000) >> 16);
         l_Buffer.emplace_back((m_LocalSeed   & 0x0000FF00) >>  8);

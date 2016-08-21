@@ -23,11 +23,11 @@
 #define SNET_PEER_STATISTIC_H
 
 #include <vector>
-#include "SnetPacket.h"
+#include "SnetAppMessage.h"
 
-class SnetPeerStatistic: public SnetServiceMessage {
+class SnetPeerStatistic: public SnetAppMessage {
 public:
-    SnetPeerStatistic(): SnetServiceMessage(), m_RemoteSeed(0), m_LocalSeed(0), m_LocalGeneration(0), m_AmountOfPackets(0) {}
+    SnetPeerStatistic(): SnetAppMessage(), m_RemoteSeed(0), m_LocalSeed(0), m_LocalGeneration(0), m_AmountOfPackets(0) {}
 
     // Getters
     uint32_t GetRemoteSeed()      const { return m_RemoteSeed;      }
@@ -37,8 +37,7 @@ public:
     
     // Deserializer
     size_t Deserialize(const std::vector<unsigned char>& a_Buffer) {
-        // Skip the deserializer of SnetServiceMessage, we control the payload ourselves
-        size_t l_Offset = SnetApplicationMessage::Deserialize(a_Buffer);
+        size_t l_Offset = SnetAppMessage::Deserialize(a_Buffer);
         if (l_Offset) {
             // Checks
             if ((a_Buffer.size() - l_Offset) != 13) {

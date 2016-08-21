@@ -24,19 +24,18 @@
 #include <vector>
 #include <boost/asio.hpp>
 #include "HdlcdAccessClient.h"
-#include "SnetPacket.h"
+#include "SnetAppMessage.h"
 
 
 
 
-class SnetPlatformRequest: public SnetServiceMessage {
+class SnetPlatformRequest: public SnetAppMessage {
 public:
-    SnetPlatformRequest(uint16_t a_UnicastSSA): SnetServiceMessage(0x10, 0x10, 0x04, 0x4000, a_UnicastSSA, false) {}
+    SnetPlatformRequest(uint16_t a_UnicastSSA): SnetAppMessage(0x10, 0x10, 0x04, 0x4000, a_UnicastSSA, false) {}
     
     // Serializer
     std::vector<unsigned char> Serialize() const {
-        // Skip the serializer of SnetServiceMessage, we control the payload ourselves
-        std::vector<unsigned char> l_Buffer(SnetApplicationMessage::Serialize());
+        std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());
         l_Buffer.emplace_back(0x06);
         l_Buffer.emplace_back(0x02);
         l_Buffer.emplace_back(0x00);

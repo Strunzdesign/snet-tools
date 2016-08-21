@@ -4,4 +4,8 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost REQUIRED COMPONENTS system signals)
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
-install(FILES SnetPacket.h DESTINATION include)
+install(FILES
+    SnetAppMessage.h
+    SnetPacket.h
+    SnetServiceMessage.h
+DESTINATION include)

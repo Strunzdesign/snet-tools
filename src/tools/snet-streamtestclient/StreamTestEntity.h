@@ -41,13 +41,13 @@ public:
     }
 
     void PacketReceived(const HdlcdPacketData& a_PacketData) {
-        SnetApplicationMessage l_ApplicationMessage;
-        if (l_ApplicationMessage.Deserialize(a_PacketData.GetData())) {
+        SnetAppMessage l_AppMessage;
+        if (l_AppMessage.Deserialize(a_PacketData.GetData())) {
             // Checks
-            if ((l_ApplicationMessage.GetSrcSSA() == m_UnicastSSA) && (l_ApplicationMessage.GetSrcServiceId() == 0x22) && (l_ApplicationMessage.GetDstServiceId() == 0x22)) {
-                if (l_ApplicationMessage.GetToken() == 0x01) {
+            if ((l_AppMessage.GetSrcSSA() == m_UnicastSSA) && (l_AppMessage.GetSrcServiceId() == 0x22) && (l_AppMessage.GetDstServiceId() == 0x22)) {
+                if (l_AppMessage.GetToken() == 0x01) {
                     HandleProbeReply(a_PacketData);
-                } else if (l_ApplicationMessage.GetToken() == 0x02) {
+                } else if (l_AppMessage.GetToken() == 0x02) {
                     HandlePeerStatistics(a_PacketData);
                 } // else if
             } // if

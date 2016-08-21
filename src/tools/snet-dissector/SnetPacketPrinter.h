@@ -25,7 +25,7 @@
 #include <iostream>
 #include <vector>
 #include "HdlcdPacketData.h"
-#include "SnetPacket.h"
+#include "SnetServiceMessage.h"
 
 void PrintDissectedSnetPacket(const HdlcdPacketData& a_PacketData) {
     // Print dissected s-net packet
