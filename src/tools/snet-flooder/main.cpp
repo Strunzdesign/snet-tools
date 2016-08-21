@@ -20,64 +20,9 @@
  */
 
 #include <iostream>
-#include <memory>
-#include <vector>
 #include <boost/asio.hpp>
 #include "HdlcdAccessClient.h"
-#include "SnetAppMessage.h"
-
-
-
-
-class SnetPlatformRequest: public SnetAppMessage {
-public:
-    SnetPlatformRequest(uint16_t a_UnicastSSA): SnetAppMessage(0x10, 0x10, 0x04, 0x4000, a_UnicastSSA, false) {}
-    
-    // Serializer
-    std::vector<unsigned char> Serialize() const {
-        std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());
-        l_Buffer.emplace_back(0x06);
-        l_Buffer.emplace_back(0x02);
-        l_Buffer.emplace_back(0x00);
-        l_Buffer.emplace_back(0x80);
-        l_Buffer.emplace_back(0x02);
-        l_Buffer.emplace_back(0x01);
-        return l_Buffer;
-    }
-};
-
-
-
-
-class FloodingPacketSource {
-public:
-    FloodingPacketSource(HdlcdAccessClient& a_AccessClient, uint16_t a_UnicastSSA): m_AccessClient(a_AccessClient), m_UnicastSSA(a_UnicastSSA), m_usSeqNr(0) {
-        // Trigger activity
-        SendNextPacket();
-    }
-    
-private:
-    // Helpers
-    void SendNextPacket() {
-        // Create firmware request message
-        SnetPlatformRequest l_PlatformRequest(m_UnicastSSA);
-
-        // Send one firmware request, and if done, call this method again via a provided lambda-callback
-        if (m_AccessClient.Send(std::move(HdlcdPacketData::CreatePacket(l_PlatformRequest.Serialize(), false)), [this](){ SendNextPacket(); })) {
-            // One packet is on its way
-            if (((++m_usSeqNr) % 1000) == 0) {
-                m_usSeqNr = 0;
-                std::cout << "1000 Packets written to the TCP socket" << std::endl;
-            } // if
-        } // if
-    }
-    
-    // Members
-    HdlcdAccessClient& m_AccessClient;
-    uint16_t m_UnicastSSA;
-    unsigned short m_usSeqNr;
-};
-
+#include "FloodingPacketSource.h"
 
 int main(int argc, char* argv[]) {
     try {
