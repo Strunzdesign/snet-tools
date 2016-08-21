@@ -54,7 +54,7 @@ public:
                 m_LocalSeed       += (uint32_t(a_Buffer[l_Offset +  6]) <<  8);
                 m_LocalSeed       += (uint32_t(a_Buffer[l_Offset +  7]));
                 m_LocalGeneration += (uint32_t(a_Buffer[l_Offset +  8]) << 16);
-                m_LocalGeneration += (uint32_t(a_Buffer[l_Offset +  91]) <<  8);
+                m_LocalGeneration += (uint32_t(a_Buffer[l_Offset +  9]) <<  8);
                 m_LocalGeneration += (uint32_t(a_Buffer[l_Offset + 10]));
                 m_AmountOfPackets += (uint16_t(a_Buffer[l_Offset + 11]) <<  8);
                 m_AmountOfPackets += (uint16_t(a_Buffer[l_Offset + 12]));
