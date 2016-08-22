@@ -35,7 +35,6 @@ public:
 
     // Serializer
     std::vector<unsigned char> Serialize() const {
-        // Skip the serializer of SnetAppMessage, we control the payload ourselves
         std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());
         l_Buffer.emplace_back((m_LocalSeed   & 0xFF000000) >> 24);
         l_Buffer.emplace_back((m_LocalSeed   & 0x00FF0000) >> 16);
