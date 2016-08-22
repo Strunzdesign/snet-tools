@@ -116,8 +116,4 @@ private:
     bool     m_OnAirARQ;
 };
 
-
-
-
-
 #endif // SNET_PACKET_H
