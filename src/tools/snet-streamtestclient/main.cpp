@@ -19,6 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "Config.h"
 #include <iostream>
 #include <boost/asio.hpp>
 #include "HdlcdAccessClient.h"
@@ -26,9 +27,9 @@
 
 int main(int argc, char* argv[]) {
     try {
-        std::cerr << "s-net(r) Stream Test Client\n";
+        std::cerr << "s-net(r) Stream Test Client v" << SNET_TOOLS_VERSION_MAJOR << "." << SNET_TOOLS_VERSION_MINOR << std::endl;
         if (argc != 5) {
-            std::cerr << "Usage: snet-streamtestclient <host> <port> <usb-device> <Unicast-HEX-SSA>\n";
+            std::cerr << "Usage: snet-streamtestclient <HDLCd IP addtess> <HDLCd TCP port> <Device> <Hex-SSA>\n";
             return 1;
         } // if
         

@@ -19,6 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "Config.h"
 #include <iostream>
 #include <boost/asio.hpp>
 #include "HdlcdAccessClient.h"
@@ -26,9 +27,9 @@
 
 int main(int argc, char* argv[]) {
     try {
-        std::cerr << "s-net(r) packet dissector via HDLCd\n";
+        std::cerr << "s-net(r) packet dissector v" << SNET_TOOLS_VERSION_MAJOR << "." << SNET_TOOLS_VERSION_MINOR << std::endl;
         if (argc != 4) {
-            std::cerr << "Usage: snet-dissector <host> <port> <usb-device>\n";
+            std::cerr << "Usage: snet-dissector <HDLCd IP addtess> <HDLCd TCP port> <Device>\n";
             return 1;
         } // if
 

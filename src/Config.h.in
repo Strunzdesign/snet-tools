@@ -1,0 +1,3 @@
+// The configured options and settings for the s-net(r) Tools
+#define SNET_TOOLS_VERSION_MAJOR @SNET_TOOLS_VERSION_MAJOR@
+#define SNET_TOOLS_VERSION_MINOR @SNET_TOOLS_VERSION_MINOR@
