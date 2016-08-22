@@ -1,0 +1,5 @@
+<map id="FloodingPacketSource::FloodingPacketSource" name="FloodingPacketSource::FloodingPacketSource">
+<area shape="rect" id="node2" href="$classSnetPlatformRequest.html#a5c51d36bce2fb5747ba002053be49824" title="SnetPlatformRequest\l::Serialize" alt="" coords="223,5,377,47"/>
+<area shape="rect" id="node3" href="$classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282" title="SnetAppMessage::Serialize" alt="" coords="425,13,620,39"/>
+<area shape="rect" id="node4" href="$classSnetPacket.html#a194b1bdf7f976c39b36882f30eb94a7a" title="SnetPacket::Serialize" alt="" coords="668,13,823,39"/>
+</map>

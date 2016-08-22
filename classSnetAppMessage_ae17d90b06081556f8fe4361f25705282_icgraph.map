@@ -1,0 +1,8 @@
+<map id="SnetAppMessage::Serialize" name="SnetAppMessage::Serialize">
+<area shape="rect" id="node2" href="$classSnetServiceMessage.html#aeb1983c322915642b6043bb57c646e9c" title="SnetServiceMessage\l::Serialize" alt="" coords="270,5,426,47"/>
+<area shape="rect" id="node3" href="$classSnetPlatformRequest.html#a5c51d36bce2fb5747ba002053be49824" title="SnetPlatformRequest\l::Serialize" alt="" coords="271,71,425,112"/>
+<area shape="rect" id="node5" href="$classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b" title="SnetProbeRequest::Serialize" alt="" coords="248,138,448,165"/>
+<area shape="rect" id="node4" href="$classFloodingPacketSource.html#abe098e6dc46322b44cdb0e0cdc78c1d2" title="FloodingPacketSource\l::FloodingPacketSource" alt="" coords="501,68,670,109"/>
+<area shape="rect" id="node6" href="$classStreamTestEntity.html#a819ba1d4c3cd151e49ca2b2b0ce93168" title="StreamTestEntity::Packet\lReceived" alt="" coords="496,133,675,175"/>
+<area shape="rect" id="node7" href="$snet-streamtestclient_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="723,141,775,167"/>
+</map>

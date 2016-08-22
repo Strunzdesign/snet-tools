@@ -1,0 +1,8 @@
+<map id="SnetPacket" name="SnetPacket">
+<area shape="rect" id="node2" href="$classSnetAppMessage.html" title="SnetAppMessage" alt="" coords="148,107,283,133"/>
+<area shape="rect" id="node3" href="$classSnetPeerStatistic.html" title="SnetPeerStatistic" alt="" coords="343,5,474,32"/>
+<area shape="rect" id="node4" href="$classSnetPlatformRequest.html" title="SnetPlatformRequest" alt="" coords="331,56,486,83"/>
+<area shape="rect" id="node5" href="$classSnetProbeReply.html" title="SnetProbeReply" alt="" coords="347,107,471,133"/>
+<area shape="rect" id="node6" href="$classSnetProbeRequest.html" title="SnetProbeRequest" alt="" coords="339,157,479,184"/>
+<area shape="rect" id="node7" href="$classSnetServiceMessage.html" title="SnetServiceMessage" alt="" coords="331,208,487,235"/>
+</map>
