@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
         boost::asio::ip::tcp::resolver resolver(io_service);
         auto endpoint_iterator = resolver.resolve({ argv[1], argv[2] });
         
-        // Prepare access protocol entity: 0x22 = Payload Raw RO, RX and TX, RECV_CTRL
+        // Prepare access protocol entity: 0x23 = Payload Raw RO, RX and TX, RECV_CTRL
         HdlcdAccessClient l_AccessClient(io_service, endpoint_iterator, argv[3], 0x23);
         l_AccessClient.SetOnDataCallback([](const HdlcdPacketData& a_PacketData){ PrintDissectedSnetPacket(a_PacketData); });
         l_AccessClient.SetOnClosedCallback([&io_service](){io_service.stop();});
