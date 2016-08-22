@@ -18,7 +18,7 @@ To compile the s-net(r) tools, just follow these steps:
 6.) make
 7.) make install (as root)
 
-All binaries will be installed to "/usr/local/bin/".
+All binaries will be installed to "/usr/local/bin/", the header files to "/usr/local/include/"
 
 
 
