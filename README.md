@@ -10,8 +10,9 @@ that implements the "High-level Data Link Control" protocol (HDLC). The HDLC-Dae
 This software is intended to be portable and makes use of the boost libraries. It was tested on GNU/Linux (GCC toolchain)
 and Microsoft Windows (nuwen MinGW).
 
-Releases of the HDLCd-Tools:
-- none yet
+Stable releases of the s-net(r) toolsuite:
+- v1.0 from 23.08.2016 
+  - First tested version without any open issues
 
 Current state:
 - Works well with s-net(r) BASE release 3.6
