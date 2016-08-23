@@ -33,6 +33,9 @@ public:
     void SetLocalSeed  (uint32_t a_LocalSeed   = 0) { m_LocalSeed   = a_LocalSeed; }
     void SetLocalSeqNbr(uint32_t a_LocalSeqNbr = 0) { m_LocalSeqNbr = a_LocalSeqNbr; }
 
+    // Query the size of the packet in bytes
+    size_t GetSize() const { return (SnetAppMessage::GetSize() + 8); }
+
     // Serializer
     std::vector<unsigned char> Serialize() const {
         std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());

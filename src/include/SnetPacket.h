@@ -88,6 +88,9 @@ public:
     }
     
 protected:
+    // Query the size of the packet in bytes
+    virtual size_t GetSize() const { if (m_OnAirARQ) { return 7; } else { return 6; } }
+    
     // Serializer
     virtual std::vector<unsigned char> Serialize() const {
         std::vector<unsigned char> l_Buffer;

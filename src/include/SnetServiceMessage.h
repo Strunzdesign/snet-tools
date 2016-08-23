@@ -47,6 +47,9 @@ public:
     void SetPayload(const std::vector<unsigned char> &a_Payload) { m_Payload = a_Payload; }
     std::vector<unsigned char> GetPayload() const { return m_Payload; }
 
+    // Query the size of the packet in bytes
+    size_t GetSize() const { return (SnetAppMessage::GetSize() + m_Payload.size()); }
+
     // Serializer and deserializer
     std::vector<unsigned char> Serialize() const {
         std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());

@@ -101,7 +101,7 @@ private:
         // Send one probe request, and if done, call this method again via a provided lambda-callback
         if (m_AccessClient.Send(std::move(HdlcdPacketData::CreatePacket(l_ProbeRequest.Serialize(), true)), [this](){ SendNextProbeRequest(); })) {
             // One packet is on its way
-            m_TotalBytesWritten += 20;
+            m_TotalBytesWritten += l_ProbeRequest.GetSize();
             if (((++m_LocalSeqNbr) % 0xFF) == 0) {
                 std::cout << "256 Packets written to the TCP socket (" << std::dec << m_TotalBytesWritten << " bytes total)" << std::endl;
             } // if

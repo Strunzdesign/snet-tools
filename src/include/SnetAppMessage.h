@@ -78,6 +78,9 @@ public:
     }
     
 protected:
+    // Query the size of the packet in bytes
+    size_t GetSize() const { return (SnetPacket::GetSize() + 5); }
+    
     // Serializer
     std::vector<unsigned char> Serialize() const {
         std::vector<unsigned char> l_Buffer(SnetPacket::Serialize());
