@@ -22,11 +22,18 @@ configure_file (
     "${PROJECT_BINARY_DIR}/src/Config.h"
 )
 
-# Add include path for Microsoft Windows
-set(HDLCD_INCLUDE_DIR "/usr/local/include" CACHE FILEPATH "/usr/local/include")
-if (NOT EXISTS ${HDLCD_INCLUDE_DIR}/HdlcdPacket.h)
-    message(SEND_ERROR "Can't find the HDLC Daemon header files in ${HDLCD_INCLUDE_DIR}")
+# Add include path for Microsoft Windows: hdlcd-devel
+set(HDLCD_DEVEL_INCLUDE_DIR "/usr/local/include" CACHE FILEPATH "/usr/local/include")
+if (NOT EXISTS ${HDLCD_DEVEL_INCLUDE_DIR}/HdlcdConfig.h)
+    message(SEND_ERROR "Can't find the HDLC daemon header files in ${HDLCD_DEVEL_INCLUDE_DIR}")
 endif()
-include_directories(${HDLCD_INCLUDE_DIR})
+include_directories(${HDLCD_DEVEL_INCLUDE_DIR})
+
+# Add include path for Microsoft Windows: snet-devel
+set(SNET_DEVEL_INCLUDE_DIR "/usr/local/include" CACHE FILEPATH "/usr/local/include")
+if (NOT EXISTS ${SNET_DEVEL_INCLUDE_DIR}/SnetConfig.h)
+    message(SEND_ERROR "Can't find the snet header files in ${SNET_DEVEL_INCLUDE_DIR}")
+endif()
+include_directories(${SNET_DEVEL_INCLUDE_DIR})
 
 add_subdirectory(src)
