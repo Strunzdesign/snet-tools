@@ -8,10 +8,10 @@ Most of these tools require three arguments, some four:
 
 Example (GNU/Linux):
 
-cd build/src/tools/snet-dissector
-./snet-dissector 127.0.0.1 10000 /dev/ttyUSB0
+cd build/src/snet-dissector
+./snet-dissector --connect /dev/ttyUSB0@127.0.0.1:10000
 
 Example (Microsoft Windows):
 
-cd build\src\tools\snet-dissector
-snet-dissector.exe 127.0.0.1 10000 "//./COM1"
+cd build\src\snet-dissector
+snet-dissector.exe --connect //./COM1@example.com:10000
