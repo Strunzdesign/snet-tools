@@ -49,6 +49,6 @@ To compile and install the s-net(r) tools, just follow these steps:
 12.) make
 13.) make install
 
-The "snet-tools" binaries will be installed to "C:\snet-tools\bin\".
+The "snet-tools" binaries will be installed to "C:\snet-tools\bin\" if not specified differently.
 
 Have fun :-)
