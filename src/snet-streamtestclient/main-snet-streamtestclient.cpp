@@ -1,5 +1,5 @@
 /**
- * \file main.cpp
+ * \file main-snet-streamtestclient.cpp
  * \brief 
  *
  * A set of tools to exchange and handle packets of s-net(r) devices via the HDLC Daemon.
@@ -23,15 +23,20 @@
 #include <iostream>
 #include <boost/asio.hpp>
 #include "HdlcdAccessClient.h"
-#include "SnetPacketPrinter.h"
+#include "StreamTestEntity.h"
 
 int main(int argc, char* argv[]) {
     try {
-        std::cerr << "s-net(r) packet dissector v" << SNET_TOOLS_VERSION_MAJOR << "." << SNET_TOOLS_VERSION_MINOR << std::endl;
-        if (argc != 4) {
-            std::cerr << "Usage: snet-dissector <HDLCd IP addtess> <HDLCd TCP port> <Device>\n";
+        std::cerr << "s-net(r) Stream Test Client v" << SNET_TOOLS_VERSION_MAJOR << "." << SNET_TOOLS_VERSION_MINOR << std::endl;
+        if (argc != 5) {
+            std::cerr << "Usage: snet-streamtestclient <HDLCd IP addtess> <HDLCd TCP port> <Device> <Hex-SSA>\n";
             return 1;
         } // if
+        
+        // Convert the provided hexadecimal SSA
+        uint16_t l_UnicastSSA;
+        std::istringstream l_Converter(argv[4]);
+        l_Converter >> std::hex >> l_UnicastSSA;
 
         // Install signal handlers
         boost::asio::io_service io_service;
@@ -43,17 +48,22 @@ int main(int argc, char* argv[]) {
         // Resolve destination
         boost::asio::ip::tcp::resolver resolver(io_service);
         auto endpoint_iterator = resolver.resolve({ argv[1], argv[2] });
-        
-        // Prepare access protocol entity: 0x23 = Payload Raw RO, RX and TX, RECV_CTRL
-        HdlcdAccessClient l_AccessClient(io_service, endpoint_iterator, argv[3], 0x23);
-        l_AccessClient.SetOnDataCallback([](const HdlcdPacketData& a_PacketData){ PrintDissectedSnetPacket(a_PacketData); });
+
+        // Prepare access protocol entity
+        HdlcdAccessClient l_AccessClient(io_service, endpoint_iterator, argv[3], 0x01);
         l_AccessClient.SetOnClosedCallback([&io_service](){io_service.stop();});
-        
+
+        // Prepare input
+        StreamTestEntity l_StreamTestEntity(l_AccessClient, l_UnicastSSA);
+        l_AccessClient.SetOnDataCallback([&l_StreamTestEntity](const HdlcdPacketData& a_PacketData){ 
+            l_StreamTestEntity.PacketReceived(a_PacketData);
+        });
+
         // Start event processing
         io_service.run();
     } catch (std::exception& e) {
         std::cerr << "Exception: " << e.what() << "\n";
     } // catch
-
+    
     return 0;
 }

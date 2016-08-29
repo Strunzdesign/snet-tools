@@ -8,7 +8,7 @@ include_directories("${PROJECT_SOURCE_DIR}/src/include")
 find_package(Threads)
 
 add_executable(snet-flooder
-main.cpp
+main-snet-flooder.cpp
 )
 
 if(WIN32)

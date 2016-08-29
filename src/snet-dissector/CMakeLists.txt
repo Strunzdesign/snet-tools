@@ -8,7 +8,7 @@ include_directories("${PROJECT_SOURCE_DIR}/src/include")
 find_package(Threads)
 
 add_executable(snet-dissector
-main.cpp
+main-snet-dissector.cpp
 )
 
 if(WIN32)

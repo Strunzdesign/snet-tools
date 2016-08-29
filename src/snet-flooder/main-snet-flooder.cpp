@@ -1,5 +1,5 @@
 /**
- * \file main.cpp
+ * \file main-snet-flooder.cpp
  * \brief 
  *
  * A set of tools to exchange and handle packets of s-net(r) devices via the HDLC Daemon.
