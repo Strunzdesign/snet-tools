@@ -5,11 +5,13 @@ How to install the s-net(r) tools for the HDLC Daemon
 For GNU/Linux:
 ---
 Preparations:
-- First install the HDLC Daemon from https://github.com/Strunzdesign/hdlcd.
-- Follow the HDLCd installation guide from file INSTALL.
-- Following that guide assures that your toolchain is complete.
+- Install the "GCC toolchain"
+- Install the "Boost Libraries"
+- Install the "CMake" build system
+- Install the shared header files from https://github.com/Strunzdesign/hdlcd-devel.git
+- Install the shared header files from https://github.com/Strunzdesign/snet-devel.git
 
-To compile the s-net(r) tools, just follow these steps:
+To compile and install the s-net(r) tools, just follow these steps:
 1.) git clone https://github.com/Strunzdesign/snet-tools.git
 2.) cd snet-tools
 3.) mkdir build
@@ -18,30 +20,35 @@ To compile the s-net(r) tools, just follow these steps:
 6.) make
 7.) make install (as root)
 
-All binaries will be installed to "/usr/local/bin/", the header files to "/usr/local/include/"
+All binaries will be installed to "/usr/local/bin/".
 
 
 
 For Microsoft Windows 7:
 ---
 Preparations:
-- First install the HDLC Daemon from https://github.com/Strunzdesign/hdlcd.
-- Follow the HDLCd installation guide from file INSTALL.
-- Following that guide assures that your toolchain is complete.
+- Download the latest "nuwen MinGW" distribution from https://nuwen.net/mingw.html
+- Assure that you pick a MinGW distribution that already includes "Git" and the "Boost Libraries"
+- Follow the installation guide, e.g., unpack MinGW to C:\MinGW
+- Add MinGW to the path according to the installation guide
+- Download and install "CMake" from https://cmake.org/download
+- Install the shared header files from https://github.com/Strunzdesign/hdlcd-devel.git
+- Install the shared header files from https://github.com/Strunzdesign/snet-devel.git
 
-To compile the s-net(r) tools and to install them along with the header files, just follow these steps:
+To compile and install the s-net(r) tools, just follow these steps:
 1.) Go to your projects' folder and open a shell there
 2.) git clone https://github.com/Strunzdesign/snet-tools.git
 3.) cd snet-tools
 4.) mkdir build
 5.) cd build
 6.) Pick yourself a directory to install the compiled files, e.g., consider C:\snet-tools
-7.) Remember the directory where you installed the HDLC Daemon, e.g., C:\hdlcd
-8.) cmake -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=/c/snet-tools -DHDLCD_INCLUDE_DIR=/c/hdlcd/include ..
-9.) If you get an error message on step 8, repeat step 9 once
-10.) make
-11.) make install
+7.) Remember the directory where you installed the shared header files, e.g., C:\hdlcd-devel
+8.) Remember the directory where you installed the shared header files, e.g., C:\snet-devel
+10.) cmake -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=/c/snet-tools -DHDLCD_DEVEL_INCLUDE_DIR=/c/hdlcd-devel/include -DSNET_DEVEL_INCLUDE_DIR=/c/snet-devel/include ..
+11.) If you get an error message on step 10, repeat step 10 once
+12.) make
+13.) make install
 
-The "snet-tools" binaries will be installed to "C:\snet-tools\bin\", the header files to "C:\snet-tools\include\".
+The "snet-tools" binaries will be installed to "C:\snet-tools\bin\".
 
 Have fun :-)
