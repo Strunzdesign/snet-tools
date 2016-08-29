@@ -35,6 +35,25 @@ public:
     uint32_t GetLocalGeneration() const { return m_LocalGeneration; }
     uint16_t GetAmountOfPackets() const { return m_AmountOfPackets; }
     
+    // Serializer
+    std::vector<unsigned char> Serialize() const {
+        std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());
+        l_Buffer.emplace_back((m_RemoteSeed      & 0xFF000000) >> 24);
+        l_Buffer.emplace_back((m_RemoteSeed      & 0x00FF0000) >> 16);
+        l_Buffer.emplace_back((m_RemoteSeed      & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_RemoteSeed      & 0x000000FF);
+        l_Buffer.emplace_back((m_LocalSeed       & 0xFF000000) >> 24);
+        l_Buffer.emplace_back((m_LocalSeed       & 0x00FF0000) >> 16);
+        l_Buffer.emplace_back((m_LocalSeed       & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_LocalSeed       & 0x000000FF);
+        l_Buffer.emplace_back((m_LocalGeneration & 0x00FF0000) >> 16);
+        l_Buffer.emplace_back((m_LocalGeneration & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_LocalGeneration & 0x000000FF);
+        l_Buffer.emplace_back((m_AmountOfPackets & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_AmountOfPackets & 0x000000FF);
+        return l_Buffer;
+    }
+
     // Deserializer
     size_t Deserialize(const std::vector<unsigned char>& a_Buffer) {
         size_t l_Offset = SnetAppMessage::Deserialize(a_Buffer);

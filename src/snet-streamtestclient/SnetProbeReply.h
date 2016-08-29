@@ -35,6 +35,28 @@ public:
     uint32_t GetRemoteSeqNbr() const { return m_RemoteSeqNbr; }
     uint32_t GetLocalSeqNbr()  const { return m_LocalSeqNbr;  }
     
+    // Serializer
+    std::vector<unsigned char> Serialize() const {
+        std::vector<unsigned char> l_Buffer(SnetAppMessage::Serialize());
+        l_Buffer.emplace_back((m_RemoteSeed   & 0xFF000000) >> 24);
+        l_Buffer.emplace_back((m_RemoteSeed   & 0x00FF0000) >> 16);
+        l_Buffer.emplace_back((m_RemoteSeed   & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_RemoteSeed   & 0x000000FF);
+        l_Buffer.emplace_back((m_LocalSeed    & 0xFF000000) >> 24);
+        l_Buffer.emplace_back((m_LocalSeed    & 0x00FF0000) >> 16);
+        l_Buffer.emplace_back((m_LocalSeed    & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_LocalSeed    & 0x000000FF);
+        l_Buffer.emplace_back((m_RemoteSeqNbr & 0xFF000000) >> 24);
+        l_Buffer.emplace_back((m_RemoteSeqNbr & 0x00FF0000) >> 16);
+        l_Buffer.emplace_back((m_RemoteSeqNbr & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_RemoteSeqNbr & 0x000000FF);
+        l_Buffer.emplace_back((m_LocalSeqNbr  & 0xFF000000) >> 24);
+        l_Buffer.emplace_back((m_LocalSeqNbr  & 0x00FF0000) >> 16);
+        l_Buffer.emplace_back((m_LocalSeqNbr  & 0x0000FF00) >>  8);
+        l_Buffer.emplace_back (m_LocalSeqNbr  & 0x000000FF);
+        return l_Buffer;
+    }
+    
     // Deserializer
     size_t Deserialize(const std::vector<unsigned char>& a_Buffer) {
         size_t l_Offset = SnetAppMessage::Deserialize(a_Buffer);
