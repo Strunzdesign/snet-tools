@@ -31,6 +31,7 @@
 class StreamTestEntity {
 public:
     StreamTestEntity(HdlcdAccessClient& a_AccessClient, uint16_t a_UnicastSSA): m_AccessClient(a_AccessClient), m_LocalSeqNbr(0), m_RemoteStatistic("remote      "), m_LocalStatistic("local       "), m_UnicastSSA(a_UnicastSSA) {
+        // Init
         srand(::time(NULL));
         m_LocalSeed = rand();
         m_RemoteSeed = 0;
@@ -38,8 +39,13 @@ public:
         
         // Trigger activity
         SendNextProbeRequest();
+        m_AccessClient.SetOnDataCallback([this](const HdlcdPacketData& a_PacketData) { 
+            PacketReceived(a_PacketData);
+        });
     }
 
+private:
+    // Helpers
     void PacketReceived(const HdlcdPacketData& a_PacketData) {
         SnetAppMessage l_AppMessage;
         if (l_AppMessage.Deserialize(a_PacketData.GetData())) {
@@ -53,9 +59,7 @@ public:
             } // if
         } // if
     }
-    
-private:
-    // Helpers
+
     void HandleProbeReply(const HdlcdPacketData& a_PacketData) {
         SnetProbeReply l_ProbeReply;
         if (l_ProbeReply.Deserialize(a_PacketData.GetData())) {

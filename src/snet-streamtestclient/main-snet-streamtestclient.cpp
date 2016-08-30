@@ -87,15 +87,10 @@ int main(int argc, char* argv[]) {
             boost::asio::ip::tcp::resolver l_Resolver(l_IoService);
             auto l_EndpointIterator = l_Resolver.resolve({ l_Match[2], l_Match[3] });
             
-            // Prepare access protocol entity
+            // Prepare access protocol entity and stream test client entity
             HdlcdAccessClient l_AccessClient(l_IoService, l_EndpointIterator, l_Match[1], 0x01);
             l_AccessClient.SetOnClosedCallback([&l_IoService](){ l_IoService.stop(); });
-
-            // Prepare input
             StreamTestEntity l_StreamTestEntity(l_AccessClient, l_UnicastSSA);
-            l_AccessClient.SetOnDataCallback([&l_StreamTestEntity](const HdlcdPacketData& a_PacketData){ 
-                l_StreamTestEntity.PacketReceived(a_PacketData);
-            });
             
             // Start event processing
             l_IoService.run();
