@@ -22,7 +22,7 @@
 #ifndef STREAM_TEST_ENTITY_H
 #define STREAM_TEST_ENTITY_H
 
-#include "HdlcdAccessClient.h"
+#include "HdlcdClient.h"
 #include "Statistic.h"
 #include "SnetProbeRequest.h"
 #include "SnetProbeReply.h"
@@ -30,7 +30,7 @@
 
 class StreamTestEntity {
 public:
-    StreamTestEntity(HdlcdAccessClient& a_AccessClient, uint16_t a_UnicastSSA): m_AccessClient(a_AccessClient), m_LocalSeqNbr(0), m_RemoteStatistic("remote      "), m_LocalStatistic("local       "), m_UnicastSSA(a_UnicastSSA) {
+    StreamTestEntity(HdlcdClient& a_HdlcdClient, uint16_t a_UnicastSSA): m_HdlcdClient(a_HdlcdClient), m_LocalSeqNbr(0), m_RemoteStatistic("remote      "), m_LocalStatistic("local       "), m_UnicastSSA(a_UnicastSSA) {
         // Init
         srand(::time(NULL));
         m_LocalSeed = rand();
@@ -39,7 +39,7 @@ public:
         
         // Trigger activity
         SendNextProbeRequest();
-        m_AccessClient.SetOnDataCallback([this](const HdlcdPacketData& a_PacketData) { 
+        m_HdlcdClient.SetOnDataCallback([this](const HdlcdPacketData& a_PacketData) { 
             PacketReceived(a_PacketData);
         });
     }
@@ -103,7 +103,7 @@ private:
         l_ProbeRequest.SetLocalSeqNbr(m_LocalSeqNbr);
 
         // Send one probe request, and if done, call this method again via a provided lambda-callback
-        if (m_AccessClient.Send(std::move(HdlcdPacketData::CreatePacket(l_ProbeRequest.Serialize(), true)), [this](){ SendNextProbeRequest(); })) {
+        if (m_HdlcdClient.Send(std::move(HdlcdPacketData::CreatePacket(l_ProbeRequest.Serialize(), true)), [this](){ SendNextProbeRequest(); })) {
             // One packet is on its way
             m_TotalBytesWritten += l_ProbeRequest.GetSize();
             if (((++m_LocalSeqNbr) % 0xFF) == 0) {
@@ -116,7 +116,7 @@ private:
     uint16_t m_UnicastSSA;
     uint32_t m_RemoteSeed;
     uint32_t m_LocalSeed;
-    HdlcdAccessClient& m_AccessClient;
+    HdlcdClient& m_HdlcdClient;
     uint32_t m_LocalSeqNbr;
     Statistic m_RemoteStatistic;
     Statistic m_LocalStatistic;

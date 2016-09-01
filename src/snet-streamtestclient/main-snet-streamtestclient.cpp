@@ -24,7 +24,7 @@
 #include <boost/asio.hpp>
 #include <boost/program_options.hpp>
 #include <boost/regex.hpp>
-#include "HdlcdAccessClient.h"
+#include "HdlcdClient.h"
 #include "StreamTestEntity.h"
 
 int main(int argc, char* argv[]) {
@@ -87,10 +87,10 @@ int main(int argc, char* argv[]) {
             boost::asio::ip::tcp::resolver l_Resolver(l_IoService);
             auto l_EndpointIterator = l_Resolver.resolve({ l_Match[2], l_Match[3] });
             
-            // Prepare access protocol entity and stream test client entity
-            HdlcdAccessClient l_AccessClient(l_IoService, l_EndpointIterator, l_Match[1], 0x01);
-            l_AccessClient.SetOnClosedCallback([&l_IoService](){ l_IoService.stop(); });
-            StreamTestEntity l_StreamTestEntity(l_AccessClient, l_UnicastSSA);
+            // Prepare HDLCD access protocol entity and stream test client entity
+            HdlcdClient l_HdlcdClient(l_IoService, l_EndpointIterator, l_Match[1], 0x01);
+            l_HdlcdClient.SetOnClosedCallback([&l_IoService](){ l_IoService.stop(); });
+            StreamTestEntity l_StreamTestEntity(l_HdlcdClient, l_UnicastSSA);
             
             // Start event processing
             l_IoService.run();

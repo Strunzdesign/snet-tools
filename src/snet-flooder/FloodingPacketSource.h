@@ -22,12 +22,12 @@
 #ifndef FLOODING_PACKET_SOURCE_H
 #define FLOODING_PACKET_SOURCE_H
 
-#include "HdlcdAccessClient.h"
+#include "HdlcdClient.h"
 #include "SnetPlatformRequest.h"
 
 class FloodingPacketSource {
 public:
-    FloodingPacketSource(HdlcdAccessClient& a_AccessClient, uint16_t a_UnicastSSA): m_AccessClient(a_AccessClient), m_UnicastSSA(a_UnicastSSA), m_usSeqNr(0) {
+    FloodingPacketSource(HdlcdClient& a_HdlcdClient, uint16_t a_UnicastSSA): m_HdlcdClient(a_HdlcdClient), m_UnicastSSA(a_UnicastSSA), m_usSeqNr(0) {
         // Trigger activity
         SendNextPacket();
     }
@@ -39,7 +39,7 @@ private:
         SnetPlatformRequest l_PlatformRequest(m_UnicastSSA);
 
         // Send one firmware request, and if done, call this method again via a provided lambda-callback
-        if (m_AccessClient.Send(std::move(HdlcdPacketData::CreatePacket(l_PlatformRequest.Serialize(), false)), [this](){ SendNextPacket(); })) {
+        if (m_HdlcdClient.Send(std::move(HdlcdPacketData::CreatePacket(l_PlatformRequest.Serialize(), false)), [this](){ SendNextPacket(); })) {
             // One packet is on its way
             if (((++m_usSeqNr) % 1000) == 0) {
                 m_usSeqNr = 0;
@@ -49,7 +49,7 @@ private:
     }
     
     // Members
-    HdlcdAccessClient& m_AccessClient;
+    HdlcdClient& m_HdlcdClient;
     uint16_t m_UnicastSSA;
     unsigned short m_usSeqNr;
 };
