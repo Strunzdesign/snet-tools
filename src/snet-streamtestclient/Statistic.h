@@ -35,6 +35,9 @@ public:
         m_SeqNbrsSeen[1].reset();
         m_Generation = 0;
         m_BankIndex = 0;
+        m_TotalReceived = 0;
+        m_TotalMissing = 0;
+        m_Resets = 0;
     }
     
     void Update(uint32_t a_SeqNbr) {
@@ -61,6 +64,7 @@ public:
             PrintReport(m_Generation, m_SeqNbrsSeen[m_BankIndex].count());
             ++m_Generation;
             uint8_t l_BankIndex = ((m_BankIndex + 1) & 0x01);
+            
             PrintReport(m_Generation, m_SeqNbrsSeen[m_BankIndex].count());
             ++m_Generation;
             m_SeqNbrsSeen[0].reset();
@@ -68,23 +72,36 @@ public:
             m_SeqNbrsSeen[l_BankIndex].set(l_Nbr);
         } else {
             // Start from scratch
+            m_TotalReceived += m_SeqNbrsSeen[0].count();
+            m_TotalReceived += m_SeqNbrsSeen[1].count();
             m_SeqNbrsSeen[0].reset();
             m_SeqNbrsSeen[1].reset();
             m_BankIndex = 0;
             m_Generation = l_Generation;
             m_SeqNbrsSeen[0].set(l_Nbr);
+            ++m_Resets;
         } // else
     }
 
 private:
     // Helpers
     void PrintReport(uint32_t a_Generation, size_t a_AmountOfPackets) {
+        // Update statistic
+        m_TotalReceived +=        a_AmountOfPackets;
+        m_TotalMissing  += (256 - a_AmountOfPackets);
+            
         std::cout << "Report " << std::dec << m_Identifier << ": Gen = " << a_Generation << ", Amount = " << a_AmountOfPackets;
         if (a_AmountOfPackets == 256) {
-            std::cout << std::endl;
+            std::cout << "       ";
         } else {
-            std::cout << " (!!!)" << std::endl;
+            std::cout << " (!!!) ";
         } // else
+        
+        double l_DeliveryRate = ((m_TotalReceived * 100) / (m_TotalReceived + m_TotalMissing));
+        std::cout << "resets: " << m_Resets
+                  << ", total RX: " << m_TotalReceived
+                  << ", estimated loss (lower bound): " << m_TotalMissing
+                  << ", delivery rate: " << l_DeliveryRate << std::endl;
     }
     
     // Members
@@ -92,6 +109,9 @@ private:
     uint32_t m_Generation;
     uint8_t m_BankIndex;
     std::bitset<256> m_SeqNbrsSeen[2];
+    unsigned long long m_TotalReceived;
+    unsigned long long m_TotalMissing;
+    unsigned long long m_Resets;
 };
 
 #endif // STATISTIC_H
