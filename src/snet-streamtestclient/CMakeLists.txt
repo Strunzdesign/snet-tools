@@ -8,7 +8,7 @@ include_directories("${PROJECT_SOURCE_DIR}/src/include")
 find_package(Threads)
 
 add_executable(snet-streamtestclient
-main-snet-streamtestclient.cpp
+    main-snet-streamtestclient.cpp
 )
 
 if(WIN32)
@@ -18,9 +18,9 @@ else()
 endif()
 
 target_link_libraries(snet-streamtestclient
-${Boost_LIBRARIES}
-${CMAKE_THREAD_LIBS_INIT}
-${ADDITIONAL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${ADDITIONAL_LIBRARIES}
 )
 
 install(TARGETS snet-streamtestclient RUNTIME DESTINATION bin)

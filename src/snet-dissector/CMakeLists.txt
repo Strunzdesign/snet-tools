@@ -8,7 +8,7 @@ include_directories("${PROJECT_SOURCE_DIR}/src/include")
 find_package(Threads)
 
 add_executable(snet-dissector
-main-snet-dissector.cpp
+    main-snet-dissector.cpp
 )
 
 if(WIN32)
@@ -18,9 +18,9 @@ else()
 endif()
 
 target_link_libraries(snet-dissector
-${Boost_LIBRARIES}
-${CMAKE_THREAD_LIBS_INIT}
-${ADDITIONAL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${ADDITIONAL_LIBRARIES}
 )
 
 install(TARGETS snet-dissector RUNTIME DESTINATION bin)
