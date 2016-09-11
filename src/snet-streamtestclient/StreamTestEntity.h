@@ -30,7 +30,7 @@
 
 class StreamTestEntity {
 public:
-    StreamTestEntity(HdlcdClient& a_HdlcdClient, uint16_t a_UnicastSSA): m_HdlcdClient(a_HdlcdClient), m_LocalSeqNbr(0), m_RemoteStatistic("remote      "), m_LocalStatistic("local       "), m_UnicastSSA(a_UnicastSSA) {
+    StreamTestEntity(HdlcdClient& a_HdlcdClient, uint16_t a_UnicastSSA): m_UnicastSSA(a_UnicastSSA), m_HdlcdClient(a_HdlcdClient), m_LocalSeqNbr(0), m_RemoteStatistic("remote      "), m_LocalStatistic("local       ") {
         // Init
         srand(::time(NULL));
         m_LocalSeed = rand();
