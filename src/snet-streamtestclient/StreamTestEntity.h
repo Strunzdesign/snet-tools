@@ -36,12 +36,14 @@ public:
         m_LocalSeed = rand();
         m_RemoteSeed = 0;
         m_TotalBytesWritten = 0;
-        
-        // Trigger activity
-        SendNextProbeRequest();
         m_HdlcdClient.SetOnDataCallback([this](const HdlcdPacketData& a_PacketData) { 
             PacketReceived(a_PacketData);
         });
+    }
+    
+    void Start() {
+        // Trigger activity
+        SendNextProbeRequest();
     }
 
 private:

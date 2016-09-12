@@ -28,6 +28,9 @@
 class FloodingPacketSource {
 public:
     FloodingPacketSource(HdlcdClient& a_HdlcdClient, uint16_t a_UnicastSSA): m_HdlcdClient(a_HdlcdClient), m_UnicastSSA(a_UnicastSSA), m_usSeqNr(0) {
+    }
+    
+    void Start() {
         // Trigger activity
         SendNextPacket();
     }
