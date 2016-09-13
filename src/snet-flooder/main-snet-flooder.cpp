@@ -95,11 +95,12 @@ int main(int argc, char* argv[]) {
             
             // Prepare input then connect
             FloodingPacketSource l_FloodingPacketSource(l_HdlcdClient, l_UnicastSSA);
-            l_HdlcdClient.AsyncConnect(l_EndpointIterator, [&l_FloodingPacketSource](bool a_bSuccess) {
+            l_HdlcdClient.AsyncConnect(l_EndpointIterator, [&l_FloodingPacketSource, &l_Signals](bool a_bSuccess) {
                 if (a_bSuccess) {
                     l_FloodingPacketSource.Start();
                 } else {
                     std::cout << "Failed to connect to the HDLC Daemon!" << std::endl;
+                    l_Signals.cancel();
                 } // else
             }); // AsyncConnect
 
