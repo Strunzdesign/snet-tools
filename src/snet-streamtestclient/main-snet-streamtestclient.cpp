@@ -92,7 +92,7 @@ int main(int argc, char* argv[]) {
             auto l_EndpointIterator = l_Resolver.resolve({ l_Match[2], l_Match[3] });
             
             // Prepare the HDLCd client entity: 0x01 = Payload RX and TX, Ctrl RX and TX
-            HdlcdClient l_HdlcdClient(l_IoService, l_Match[1], 0x01);
+            HdlcdClient l_HdlcdClient(l_IoService, l_Match[1], HdlcdSessionDescriptor(SESSION_TYPE_TRX_ALL, SESSION_FLAGS_DELIVER_RCVD));
             l_HdlcdClient.SetOnClosedCallback([&l_IoService](){ l_IoService.stop(); });
 
             // Prepare input then connect
