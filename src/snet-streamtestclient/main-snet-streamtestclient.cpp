@@ -60,13 +60,15 @@ int main(int argc, char* argv[]) {
         } // if
         
         if (!l_VariablesMap.count("connect")) {
-            std::cout << "you have to specify one device to connect to" << std::endl;
+            std::cout << "snet-streamtestclient: you have to specify one device to connect to" << std::endl;
+            std::cout << "snet-streamtestclient: Use --help for more information." << std::endl;
             return 1;
         } // if
         
         uint16_t l_UnicastSSA = 0x3FF4;
         if (!l_VariablesMap.count("destination")) {
-            std::cout << "you have to specify the destination address (SSA)" << std::endl;
+            std::cout << "snet-streamtestclient: you have to specify the destination address (SSA)" << std::endl;
+            std::cout << "snet-streamtestclient: Use --help for more information." << std::endl;
             return 1;
         } else {
             // Convert the provided hexadecimal SSA
