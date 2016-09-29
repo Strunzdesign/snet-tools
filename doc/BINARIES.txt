@@ -2,7 +2,7 @@ This repository contains multiple tools for s-net(r) devices to be used together
 
 snet-dissector
 ---
-Usage:       snet-dissector --connect SerialPort@IPAddess:PortNbr
+Usage:       snet-dissector --connect SerialPort@IPAddress:PortNbr
 Description: Prints out all s-net(r) packets sent to and received from the specified device in
              human-readable form.
 
@@ -10,7 +10,7 @@ Description: Prints out all s-net(r) packets sent to and received from the speci
 
 snet-flooder
 ---
-Usage:       snet-flooder --connect SerialPort@IPAddess:PortNbr --destination <Hex-SSA>
+Usage:       snet-flooder --connect SerialPort@IPAddress:PortNbr --destination <Hex-SSA>
 Description: A stress tester for s-net(r) devices. Sends a flood of packets to the device in order
              to trigger bugs or to play with the congestion control features of s-net(r).
 
@@ -18,7 +18,7 @@ Description: A stress tester for s-net(r) devices. Sends a flood of packets to t
 
 snet-streamtestclient
 ---
-Usage:       snet-streamtestclient --connect SerialPort@IPAddess:PortNbr --destination <Hex-SSA>
+Usage:       snet-streamtestclient --connect SerialPort@IPAddress:PortNbr --destination <Hex-SSA>
 Description: This client is the counterpart to the StreamTestService of s-net(r). It sends
              a congestion-controlled flow of probe requests to the node with the specified
              address and evaluates the responses from that node. The created statistics help
