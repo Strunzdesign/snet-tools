@@ -9,10 +9,6 @@ that implements the "High-level Data Link Control" protocol (HDLC). The HDLC-Dae
 This software is intended to be portable and makes use of the boost libraries. It was tested on GNU/Linux (GCC toolchain)
 and Microsoft Windows (nuwen MinGW).
 
-Before being able to compile the tools of this repository, you have to install the shared header files from these repositories:
-- https://github.com/Strunzdesign/hdlcd-devel
-- https://github.com/Strunzdesign/snet-devel
-
 Stable releases of the s-net(r) tool suite:
 - v1.0 from 23.08.2016 
   - First tested version without any open issues
@@ -20,8 +16,8 @@ Stable releases of the s-net(r) tool suite:
 
 Current state:
 - v1.1pre (git master branch)
-  - Requires the header files from https://github.com/Strunzdesign/hdlcd-devel for compilation!
-  - Requires the header files from https://github.com/Strunzdesign/snet-devel for compilation!
+  - Multiple bug fixes and stability improvements
+  - Makes use of git submodules for "externals"
 
 Required libraries and tools:
 - GCC, the only tested compiler collection thus far (tested: GCC 4.9.3, GCC 6.1)
