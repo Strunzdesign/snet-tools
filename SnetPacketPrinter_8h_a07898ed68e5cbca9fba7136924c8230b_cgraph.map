@@ -1,8 +1,10 @@
 <map id="PrintDissectedSnetPacket" name="PrintDissectedSnetPacket">
-<area shape="rect" id="node2" href="$classSnetServiceMessage.html#a09ef19df55558c530638bd8e492bd16d" title="SnetServiceMessage\l::Deserialize" alt="" coords="239,5,395,47"/>
-<area shape="rect" id="node5" href="$classSnetServiceMessage.html#ab75610cca1ca1767c0675412503db8e8" title="SnetServiceMessage\l::Dissect" alt="" coords="239,71,395,112"/>
-<area shape="rect" id="node3" href="$classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9" title="SnetAppMessage::Deserialize" alt="" coords="443,13,653,39"/>
-<area shape="rect" id="node4" href="$classSnetPacket.html#af6a6cff7f3afcbc8e75139965e6e2f38" title="SnetPacket::Deserialize" alt="" coords="701,13,872,39"/>
-<area shape="rect" id="node6" href="$classSnetAppMessage.html#ae2010d110cfa9fa358853d830bf869d1" title="SnetAppMessage::Dissect" alt="" coords="455,78,641,105"/>
-<area shape="rect" id="node7" href="$classSnetPacket.html#a81540fd45a9f549827a406718a943f83" title="SnetPacket::Dissect" alt="" coords="713,78,860,105"/>
+<area shape="rect" id="node2" href="$classSnetServiceMessage.html#a09ef19df55558c530638bd8e492bd16d" title="SnetServiceMessage\l::Deserialize" alt="" coords="269,5,425,47"/>
+<area shape="rect" id="node5" href="$classHdlcdPacketData.html#abc690e2d3d84998df23221f10f893f81" title="HdlcdPacketData::GetData" alt="" coords="252,71,443,98"/>
+<area shape="rect" id="node6" href="$classHdlcdPacketData.html#a3e3ed17e50f5689f9f044c62582f3194" title="HdlcdPacketData::GetWasSent" alt="" coords="239,122,456,149"/>
+<area shape="rect" id="node7" href="$classSnetServiceMessage.html#ab75610cca1ca1767c0675412503db8e8" title="SnetServiceMessage\l::Dissect" alt="" coords="269,173,425,215"/>
+<area shape="rect" id="node3" href="$classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9" title="SnetAppMessage::Deserialize" alt="" coords="504,13,715,39"/>
+<area shape="rect" id="node4" href="$classSnetPacket.html#af6a6cff7f3afcbc8e75139965e6e2f38" title="SnetPacket::Deserialize" alt="" coords="763,13,933,39"/>
+<area shape="rect" id="node8" href="$classSnetAppMessage.html#ae2010d110cfa9fa358853d830bf869d1" title="SnetAppMessage::Dissect" alt="" coords="516,181,703,207"/>
+<area shape="rect" id="node9" href="$classSnetPacket.html#a81540fd45a9f549827a406718a943f83" title="SnetPacket::Dissect" alt="" coords="775,181,921,207"/>
 </map>

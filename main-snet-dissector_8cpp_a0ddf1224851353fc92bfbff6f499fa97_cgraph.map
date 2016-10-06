@@ -1,0 +1,14 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classHdlcdClient.html#aca11bffddc34e66a67d7e738e9e8d6b3" title="Provide a callback method to be called if this client entity is closing. " alt="" coords="125,5,309,47"/>
+<area shape="rect" id="node3" href="$classHdlcdClient.html#a35c0dfb9e0e2ae4ac6e139b7737e0f55" title="Provide a callback method to be called for received data packets. " alt="" coords="105,71,328,98"/>
+<area shape="rect" id="node4" href="$SnetPacketPrinter_8h.html#a07898ed68e5cbca9fba7136924c8230b" title="PrintDissectedSnetPacket" alt="" coords="124,122,309,149"/>
+<area shape="rect" id="node13" href="$classHdlcdClient.html#a485e29db5cb483d9c0ac45febd963bbf" title="Perform an asynchronous connect procedure regarding both TCP sockets. " alt="" coords="121,173,312,199"/>
+<area shape="rect" id="node5" href="$classSnetServiceMessage.html#a09ef19df55558c530638bd8e492bd16d" title="SnetServiceMessage\l::Deserialize" alt="" coords="407,31,563,72"/>
+<area shape="rect" id="node8" href="$classHdlcdPacketData.html#abc690e2d3d84998df23221f10f893f81" title="HdlcdPacketData::GetData" alt="" coords="389,97,580,123"/>
+<area shape="rect" id="node9" href="$classHdlcdPacketData.html#a3e3ed17e50f5689f9f044c62582f3194" title="HdlcdPacketData::GetWasSent" alt="" coords="376,147,593,174"/>
+<area shape="rect" id="node10" href="$classSnetServiceMessage.html#ab75610cca1ca1767c0675412503db8e8" title="SnetServiceMessage\l::Dissect" alt="" coords="407,199,563,240"/>
+<area shape="rect" id="node6" href="$classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9" title="SnetAppMessage::Deserialize" alt="" coords="641,38,852,65"/>
+<area shape="rect" id="node7" href="$classSnetPacket.html#af6a6cff7f3afcbc8e75139965e6e2f38" title="SnetPacket::Deserialize" alt="" coords="900,38,1071,65"/>
+<area shape="rect" id="node11" href="$classSnetAppMessage.html#ae2010d110cfa9fa358853d830bf869d1" title="SnetAppMessage::Dissect" alt="" coords="653,206,840,233"/>
+<area shape="rect" id="node12" href="$classSnetPacket.html#a81540fd45a9f549827a406718a943f83" title="SnetPacket::Dissect" alt="" coords="912,206,1059,233"/>
+</map>

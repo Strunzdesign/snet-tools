@@ -1,4 +1,4 @@
-<map id="src/include/SnetServiceMessage.h" name="src/include/SnetServiceMessage.h">
-<area shape="rect" id="node2" href="$SnetPacketPrinter_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="41,80,208,121"/>
-<area shape="rect" id="node3" href="$snet-dissector_2main_8cpp.html" title="src/tools/snet&#45;dissector\l/main.cpp" alt="" coords="41,169,208,211"/>
+<map id="libs/snet&#45;devel/src/SnetServiceMessage.h" name="libs/snet&#45;devel/src/SnetServiceMessage.h">
+<area shape="rect" id="node2" href="$SnetPacketPrinter_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="17,95,168,136"/>
+<area shape="rect" id="node3" href="$main-snet-dissector_8cpp.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="5,184,180,225"/>
 </map>

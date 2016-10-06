@@ -4,6 +4,7 @@ var classSnetAppMessage =
     [ "Deserialize", "classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9", null ],
     [ "Dissect", "classSnetAppMessage.html#ae2010d110cfa9fa358853d830bf869d1", null ],
     [ "GetDstServiceId", "classSnetAppMessage.html#a5a719a919059c1399b4e5a8d65394360", null ],
+    [ "GetSize", "classSnetAppMessage.html#accca0148425b17f4311ef81f56567e52", null ],
     [ "GetSrcServiceId", "classSnetAppMessage.html#a5207caab009484a3f3d718102c2c7c3b", null ],
     [ "GetToken", "classSnetAppMessage.html#ae34f61cad009908da9db9ff0db319cca", null ],
     [ "Serialize", "classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282", null ],

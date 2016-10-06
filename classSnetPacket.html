@@ -146,6 +146,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a38d11f3afd3af7f32cad01325de4ad50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cef3dccd8c90d2231e5ee6bfe39f0c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetPacket.html#a0cef3dccd8c90d2231e5ee6bfe39f0c0">GetOnAirARQ</a> () const </td></tr>
 <tr class="separator:a0cef3dccd8c90d2231e5ee6bfe39f0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194b1bdf7f976c39b36882f30eb94a7a"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetPacket.html#a194b1bdf7f976c39b36882f30eb94a7a">Serialize</a> () const </td></tr>
+<tr class="separator:a194b1bdf7f976c39b36882f30eb94a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a6cff7f3afcbc8e75139965e6e2f38"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetPacket.html#af6a6cff7f3afcbc8e75139965e6e2f38">Deserialize</a> (const std::vector&lt; unsigned char &gt; &amp;a_Buffer)</td></tr>
 <tr class="separator:af6a6cff7f3afcbc8e75139965e6e2f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81540fd45a9f549827a406718a943f83"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetPacket.html#a81540fd45a9f549827a406718a943f83">Dissect</a> () const </td></tr>
@@ -153,12 +155,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a194b1bdf7f976c39b36882f30eb94a7a"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetPacket.html#a194b1bdf7f976c39b36882f30eb94a7a">Serialize</a> () const </td></tr>
-<tr class="separator:a194b1bdf7f976c39b36882f30eb94a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e4a12efa65c42ef5f5b767a3e8f3fad"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetPacket.html#a9e4a12efa65c42ef5f5b767a3e8f3fad">GetSize</a> () const </td></tr>
+<tr class="separator:a9e4a12efa65c42ef5f5b767a3e8f3fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00045">45</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00046">46</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2ba1d0bf6ee836ffc4ab772898b2452d"></a>
 <div class="memitem">
@@ -198,7 +200,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00047">47</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00048">48</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 </div>
 </div>
@@ -223,7 +225,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00048">48</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00049">49</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 </div>
 </div>
@@ -250,9 +252,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classSnetServiceMessage.html#a09ef19df55558c530638bd8e492bd16d">SnetServiceMessage</a>, <a class="el" href="classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9">SnetAppMessage</a>, <a class="el" href="classSnetPeerStatistic.html#a238d9a460bddd552e2ae92a957d0b7e0">SnetPeerStatistic</a>, and <a class="el" href="classSnetProbeReply.html#a536b4cb8f42d68770b786fbec8452ff1">SnetProbeReply</a>.</p>
+<p>Reimplemented in <a class="el" href="classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9">SnetAppMessage</a>, <a class="el" href="classSnetProbeReply.html#a536b4cb8f42d68770b786fbec8452ff1">SnetProbeReply</a>, <a class="el" href="classSnetServiceMessage.html#a09ef19df55558c530638bd8e492bd16d">SnetServiceMessage</a>, and <a class="el" href="classSnetPeerStatistic.html#a238d9a460bddd552e2ae92a957d0b7e0">SnetPeerStatistic</a>.</p>
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00059">59</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00081">81</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -262,11 +264,11 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9" title="SnetAppMessage::Deserialize" alt="" coords="224,107,435,134"/>
 <area shape="rect" id="node3" href="classSnetServiceMessage.html#a09ef19df55558c530638bd8e492bd16d" title="SnetServiceMessage\l::Deserialize" alt="" coords="505,5,661,47"/>
 <area shape="rect" id="node6" href="classSnetPeerStatistic.html#a238d9a460bddd552e2ae92a957d0b7e0" title="SnetPeerStatistic::\lDeserialize" alt="" coords="515,71,651,112"/>
-<area shape="rect" id="node7" href="classStreamTestEntity.html#a819ba1d4c3cd151e49ca2b2b0ce93168" title="StreamTestEntity::Packet\lReceived" alt="" coords="734,129,913,171"/>
+<area shape="rect" id="node7" href="classStreamTestEntity.html#a479ce135e547fe95b32f5ad2850f4a18" title="StreamTestEntity::Start" alt="" coords="740,137,907,163"/>
 <area shape="rect" id="node9" href="classSnetProbeReply.html#a536b4cb8f42d68770b786fbec8452ff1" title="SnetProbeReply::Deserialize" alt="" coords="483,187,683,214"/>
 <area shape="rect" id="node4" href="SnetPacketPrinter_8h.html#a07898ed68e5cbca9fba7136924c8230b" title="PrintDissectedSnetPacket" alt="" coords="731,13,916,39"/>
-<area shape="rect" id="node5" href="snet-dissector_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="964,13,1016,39"/>
-<area shape="rect" id="node8" href="snet-streamtestclient_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="964,137,1016,163"/>
+<area shape="rect" id="node5" href="main-snet-dissector_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="964,13,1016,39"/>
+<area shape="rect" id="node8" href="main-snet-streamtestclient_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="964,137,1016,163"/>
 </map>
 </div>
 </p>
@@ -296,7 +298,7 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="classSnetAppMessage.html#ae2010d110cfa9fa358853d830bf869d1">SnetAppMessage</a>, and <a class="el" href="classSnetServiceMessage.html#ab75610cca1ca1767c0675412503db8e8">SnetServiceMessage</a>.</p>
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00082">82</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00104">104</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -306,7 +308,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="classSnetAppMessage.html#ae2010d110cfa9fa358853d830bf869d1" title="SnetAppMessage::Dissect" alt="" coords="200,13,387,39"/>
 <area shape="rect" id="node3" href="classSnetServiceMessage.html#ab75610cca1ca1767c0675412503db8e8" title="SnetServiceMessage\l::Dissect" alt="" coords="435,5,591,47"/>
 <area shape="rect" id="node4" href="SnetPacketPrinter_8h.html#a07898ed68e5cbca9fba7136924c8230b" title="PrintDissectedSnetPacket" alt="" coords="639,13,824,39"/>
-<area shape="rect" id="node5" href="snet-dissector_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="872,13,924,39"/>
+<area shape="rect" id="node5" href="main-snet-dissector_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="872,13,924,39"/>
 </map>
 </div>
 </p>
@@ -334,7 +336,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00054">54</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00055">55</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 </div>
 </div>
@@ -359,7 +361,48 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00056">56</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00057">57</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e4a12efa65c42ef5f5b767a3e8f3fad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t SnetPacket::GetSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classSnetAppMessage.html#accca0148425b17f4311ef81f56567e52">SnetAppMessage</a>, <a class="el" href="classSnetServiceMessage.html#a039295eaca17d68cfb6354e4aa0204f0">SnetServiceMessage</a>, and <a class="el" href="classSnetProbeRequest.html#ab3db0b481b791f8ad9d7d5382e01f573">SnetProbeRequest</a>.</p>
+
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00114">114</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSnetPacket_a9e4a12efa65c42ef5f5b767a3e8f3fad_icgraph.png" border="0" usemap="#classSnetPacket_a9e4a12efa65c42ef5f5b767a3e8f3fad_icgraph" alt=""/></div>
+<map name="classSnetPacket_a9e4a12efa65c42ef5f5b767a3e8f3fad_icgraph" id="classSnetPacket_a9e4a12efa65c42ef5f5b767a3e8f3fad_icgraph">
+<area shape="rect" id="node2" href="classSnetAppMessage.html#accca0148425b17f4311ef81f56567e52" title="SnetAppMessage::GetSize" alt="" coords="204,42,395,69"/>
+<area shape="rect" id="node3" href="classSnetServiceMessage.html#a039295eaca17d68cfb6354e4aa0204f0" title="SnetServiceMessage\l::GetSize" alt="" coords="463,5,619,47"/>
+<area shape="rect" id="node4" href="classSnetProbeRequest.html#ab3db0b481b791f8ad9d7d5382e01f573" title="SnetProbeRequest::GetSize" alt="" coords="443,71,639,98"/>
+<area shape="rect" id="node5" href="classStreamTestEntity.html#a479ce135e547fe95b32f5ad2850f4a18" title="StreamTestEntity::Start" alt="" coords="687,71,853,98"/>
+<area shape="rect" id="node6" href="main-snet-streamtestclient_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="901,71,953,98"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -384,15 +427,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00052">52</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00053">53</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSnetPacket_a270da13b159d9c81c37e4d9f3d35f429_icgraph.png" border="0" usemap="#classSnetPacket_a270da13b159d9c81c37e4d9f3d35f429_icgraph" alt=""/></div>
 <map name="classSnetPacket_a270da13b159d9c81c37e4d9f3d35f429_icgraph" id="classSnetPacket_a270da13b159d9c81c37e4d9f3d35f429_icgraph">
-<area shape="rect" id="node2" href="classStreamTestEntity.html#a819ba1d4c3cd151e49ca2b2b0ce93168" title="StreamTestEntity::Packet\lReceived" alt="" coords="224,5,403,47"/>
-<area shape="rect" id="node3" href="snet-streamtestclient_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="451,13,503,39"/>
+<area shape="rect" id="node2" href="classStreamTestEntity.html#a479ce135e547fe95b32f5ad2850f4a18" title="StreamTestEntity::Start" alt="" coords="224,5,391,32"/>
+<area shape="rect" id="node3" href="main-snet-streamtestclient_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="439,5,491,32"/>
 </map>
 </div>
 </p>
@@ -415,27 +458,30 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282">SnetAppMessage</a>, <a class="el" href="classSnetServiceMessage.html#aeb1983c322915642b6043bb57c646e9c">SnetServiceMessage</a>, <a class="el" href="classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b">SnetProbeRequest</a>, and <a class="el" href="classSnetPlatformRequest.html#a5c51d36bce2fb5747ba002053be49824">SnetPlatformRequest</a>.</p>
+<p>Reimplemented in <a class="el" href="classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282">SnetAppMessage</a>, <a class="el" href="classSnetServiceMessage.html#aeb1983c322915642b6043bb57c646e9c">SnetServiceMessage</a>, <a class="el" href="classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b">SnetProbeRequest</a>, <a class="el" href="classSnetPeerStatistic.html#aa998c24b17abb3fd84223934226f96e2">SnetPeerStatistic</a>, <a class="el" href="classSnetProbeReply.html#a1ddea8387d070caa51c79d4fab90c9aa">SnetProbeReply</a>, and <a class="el" href="classSnetPlatformRequest.html#a5c51d36bce2fb5747ba002053be49824">SnetPlatformRequest</a>.</p>
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00092">92</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00060">60</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSnetPacket_a194b1bdf7f976c39b36882f30eb94a7a_icgraph.png" border="0" usemap="#classSnetPacket_a194b1bdf7f976c39b36882f30eb94a7a_icgraph" alt=""/></div>
 <map name="classSnetPacket_a194b1bdf7f976c39b36882f30eb94a7a_icgraph" id="classSnetPacket_a194b1bdf7f976c39b36882f30eb94a7a_icgraph">
-<area shape="rect" id="node2" href="classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282" title="SnetAppMessage::Serialize" alt="" coords="208,78,403,105"/>
+<area shape="rect" id="node2" href="classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282" title="SnetAppMessage::Serialize" alt="" coords="208,143,403,170"/>
 <area shape="rect" id="node3" href="classSnetServiceMessage.html#aeb1983c322915642b6043bb57c646e9c" title="SnetServiceMessage\l::Serialize" alt="" coords="473,5,629,47"/>
 <area shape="rect" id="node4" href="classSnetPlatformRequest.html#a5c51d36bce2fb5747ba002053be49824" title="SnetPlatformRequest\l::Serialize" alt="" coords="473,71,628,112"/>
-<area shape="rect" id="node6" href="classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b" title="SnetProbeRequest::Serialize" alt="" coords="451,138,651,165"/>
-<area shape="rect" id="node5" href="classFloodingPacketSource.html#abe098e6dc46322b44cdb0e0cdc78c1d2" title="FloodingPacketSource\l::FloodingPacketSource" alt="" coords="703,68,873,109"/>
-<area shape="rect" id="node7" href="classStreamTestEntity.html#a819ba1d4c3cd151e49ca2b2b0ce93168" title="StreamTestEntity::Packet\lReceived" alt="" coords="699,133,877,175"/>
-<area shape="rect" id="node8" href="snet-streamtestclient_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="925,141,977,167"/>
+<area shape="rect" id="node7" href="classSnetPeerStatistic.html#aa998c24b17abb3fd84223934226f96e2" title="SnetPeerStatistic::\lSerialize" alt="" coords="483,136,619,177"/>
+<area shape="rect" id="node8" href="classSnetProbeReply.html#a1ddea8387d070caa51c79d4fab90c9aa" title="SnetProbeReply::Serialize" alt="" coords="459,202,643,229"/>
+<area shape="rect" id="node9" href="classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b" title="SnetProbeRequest::Serialize" alt="" coords="451,253,651,279"/>
+<area shape="rect" id="node5" href="classFloodingPacketSource.html#aeb3538b740562a58345605e38a7b2315" title="FloodingPacketSource\l::Start" alt="" coords="701,71,863,112"/>
+<area shape="rect" id="node6" href="main-snet-flooder_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="913,78,965,105"/>
+<area shape="rect" id="node10" href="classStreamTestEntity.html#a479ce135e547fe95b32f5ad2850f4a18" title="StreamTestEntity::Start" alt="" coords="699,253,865,279"/>
+<area shape="rect" id="node11" href="main-snet-streamtestclient_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="913,253,965,279"/>
 </map>
 </div>
 </p>
@@ -464,7 +510,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00053">53</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00054">54</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 </div>
 </div>
@@ -490,7 +536,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00055">55</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00056">56</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 </div>
 </div>
@@ -516,12 +562,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00051">51</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetPacket_8h_source.html#l00052">52</a> of file <a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/include/<a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a></li>
+<li>libs/snet-devel/src/<a class="el" href="SnetPacket_8h_source.html">SnetPacket.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

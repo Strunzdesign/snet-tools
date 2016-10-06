@@ -1,4 +1,4 @@
 <map id="SnetServiceMessage::Dissect" name="SnetServiceMessage::Dissect">
 <area shape="rect" id="node2" href="$SnetPacketPrinter_8h.html#a07898ed68e5cbca9fba7136924c8230b" title="PrintDissectedSnetPacket" alt="" coords="209,13,395,39"/>
-<area shape="rect" id="node3" href="$snet-dissector_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="443,13,495,39"/>
+<area shape="rect" id="node3" href="$main-snet-dissector_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="443,13,495,39"/>
 </map>

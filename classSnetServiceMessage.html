@@ -140,6 +140,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af6105527d3c7724cb57b551367a19aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eac6bda00745d1b196bfa11cae2fc0b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetServiceMessage.html#a4eac6bda00745d1b196bfa11cae2fc0b">GetPayload</a> () const </td></tr>
 <tr class="separator:a4eac6bda00745d1b196bfa11cae2fc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039295eaca17d68cfb6354e4aa0204f0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetServiceMessage.html#a039295eaca17d68cfb6354e4aa0204f0">GetSize</a> () const </td></tr>
+<tr class="separator:a039295eaca17d68cfb6354e4aa0204f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb1983c322915642b6043bb57c646e9c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetServiceMessage.html#aeb1983c322915642b6043bb57c646e9c">Serialize</a> () const </td></tr>
 <tr class="separator:aeb1983c322915642b6043bb57c646e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09ef19df55558c530638bd8e492bd16d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnetServiceMessage.html#a09ef19df55558c530638bd8e492bd16d">Deserialize</a> (const std::vector&lt; unsigned char &gt; &amp;a_Buffer)</td></tr>
@@ -271,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9">SnetAppMessage</a>.</p>
 
-<p>Definition at line <a class="el" href="SnetServiceMessage_8h_source.html#l00057">57</a> of file <a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetServiceMessage_8h_source.html#l00060">60</a> of file <a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -290,7 +292,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classSnetServiceMessage_a09ef19df55558c530638bd8e492bd16d_icgraph.png" border="0" usemap="#classSnetServiceMessage_a09ef19df55558c530638bd8e492bd16d_icgraph" alt=""/></div>
 <map name="classSnetServiceMessage_a09ef19df55558c530638bd8e492bd16d_icgraph" id="classSnetServiceMessage_a09ef19df55558c530638bd8e492bd16d_icgraph">
 <area shape="rect" id="node2" href="SnetPacketPrinter_8h.html#a07898ed68e5cbca9fba7136924c8230b" title="PrintDissectedSnetPacket" alt="" coords="209,13,395,39"/>
-<area shape="rect" id="node3" href="snet-dissector_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="443,13,495,39"/>
+<area shape="rect" id="node3" href="main-snet-dissector_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="443,13,495,39"/>
 </map>
 </div>
 </p>
@@ -320,7 +322,7 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classSnetAppMessage.html#ae2010d110cfa9fa358853d830bf869d1">SnetAppMessage</a>.</p>
 
-<p>Definition at line <a class="el" href="SnetServiceMessage_8h_source.html#l00068">68</a> of file <a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetServiceMessage_8h_source.html#l00071">71</a> of file <a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -339,7 +341,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classSnetServiceMessage_ab75610cca1ca1767c0675412503db8e8_icgraph.png" border="0" usemap="#classSnetServiceMessage_ab75610cca1ca1767c0675412503db8e8_icgraph" alt=""/></div>
 <map name="classSnetServiceMessage_ab75610cca1ca1767c0675412503db8e8_icgraph" id="classSnetServiceMessage_ab75610cca1ca1767c0675412503db8e8_icgraph">
 <area shape="rect" id="node2" href="SnetPacketPrinter_8h.html#a07898ed68e5cbca9fba7136924c8230b" title="PrintDissectedSnetPacket" alt="" coords="209,13,395,39"/>
-<area shape="rect" id="node3" href="snet-dissector_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="443,13,495,39"/>
+<area shape="rect" id="node3" href="main-snet-dissector_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="443,13,495,39"/>
 </map>
 </div>
 </p>
@@ -371,6 +373,44 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a039295eaca17d68cfb6354e4aa0204f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t SnetServiceMessage::GetSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classSnetAppMessage.html#accca0148425b17f4311ef81f56567e52">SnetAppMessage</a>.</p>
+
+<p>Definition at line <a class="el" href="SnetServiceMessage_8h_source.html#l00051">51</a> of file <a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSnetServiceMessage_a039295eaca17d68cfb6354e4aa0204f0_cgraph.png" border="0" usemap="#classSnetServiceMessage_a039295eaca17d68cfb6354e4aa0204f0_cgraph" alt=""/></div>
+<map name="classSnetServiceMessage_a039295eaca17d68cfb6354e4aa0204f0_cgraph" id="classSnetServiceMessage_a039295eaca17d68cfb6354e4aa0204f0_cgraph">
+<area shape="rect" id="node2" href="classSnetAppMessage.html#accca0148425b17f4311ef81f56567e52" title="SnetAppMessage::GetSize" alt="" coords="209,13,400,39"/>
+<area shape="rect" id="node3" href="classSnetPacket.html#a9e4a12efa65c42ef5f5b767a3e8f3fad" title="SnetPacket::GetSize" alt="" coords="448,13,599,39"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="aeb1983c322915642b6043bb57c646e9c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -394,7 +434,7 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282">SnetAppMessage</a>.</p>
 
-<p>Definition at line <a class="el" href="SnetServiceMessage_8h_source.html#l00051">51</a> of file <a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="SnetServiceMessage_8h_source.html#l00054">54</a> of file <a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -436,7 +476,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/include/<a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a></li>
+<li>libs/snet-devel/src/<a class="el" href="SnetServiceMessage_8h_source.html">SnetServiceMessage.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

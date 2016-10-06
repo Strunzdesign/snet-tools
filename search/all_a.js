@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7esnetpacket',['~SnetPacket',['../classSnetPacket.html#ad36043f7495afcfdcee6236f1c54a3d8',1,'SnetPacket']]]
+  ['operator_20uint8_5ft',['operator uint8_t',['../classHdlcdSessionDescriptor.html#a838b9b531640766f1a064939a98531f4',1,'HdlcdSessionDescriptor']]]
 ];

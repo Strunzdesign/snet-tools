@@ -1,0 +1,32 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classHdlcdClient.html#aca11bffddc34e66a67d7e738e9e8d6b3" title="Provide a callback method to be called if this client entity is closing. " alt="" coords="109,461,293,502"/>
+<area shape="rect" id="node3" href="$classHdlcdClient.html#a485e29db5cb483d9c0ac45febd963bbf" title="Perform an asynchronous connect procedure regarding both TCP sockets. " alt="" coords="105,527,296,554"/>
+<area shape="rect" id="node4" href="$classStreamTestEntity.html#a479ce135e547fe95b32f5ad2850f4a18" title="StreamTestEntity::Start" alt="" coords="117,578,284,604"/>
+<area shape="rect" id="node5" href="$classSnetAppMessage.html#a124176eff2a043a9680ac7717e60c6b9" title="SnetAppMessage::Deserialize" alt="" coords="635,319,845,346"/>
+<area shape="rect" id="node7" href="$classHdlcdPacketData.html#abc690e2d3d84998df23221f10f893f81" title="HdlcdPacketData::GetData" alt="" coords="370,66,561,92"/>
+<area shape="rect" id="node8" href="$classSnetPacket.html#a270da13b159d9c81c37e4d9f3d35f429" title="SnetPacket::GetSrcSSA" alt="" coords="380,116,551,143"/>
+<area shape="rect" id="node9" href="$classSnetAppMessage.html#a5207caab009484a3f3d718102c2c7c3b" title="SnetAppMessage::GetSrcServiceId" alt="" coords="344,167,587,194"/>
+<area shape="rect" id="node10" href="$classSnetAppMessage.html#a5a719a919059c1399b4e5a8d65394360" title="SnetAppMessage::GetDstServiceId" alt="" coords="344,218,587,244"/>
+<area shape="rect" id="node11" href="$classSnetAppMessage.html#ae34f61cad009908da9db9ff0db319cca" title="SnetAppMessage::GetToken" alt="" coords="364,268,567,295"/>
+<area shape="rect" id="node12" href="$classSnetProbeReply.html#a536b4cb8f42d68770b786fbec8452ff1" title="SnetProbeReply::Deserialize" alt="" coords="365,319,565,346"/>
+<area shape="rect" id="node13" href="$classSnetProbeReply.html#a0281c4e6b73e8c4f5a966f326b48c6d3" title="SnetProbeReply::GetRemoteSeed" alt="" coords="348,370,583,396"/>
+<area shape="rect" id="node14" href="$classSnetProbeReply.html#ab43b094fcb28d05a4148a18c33c338b4" title="SnetProbeReply::GetLocalSeed" alt="" coords="355,420,575,447"/>
+<area shape="rect" id="node15" href="$classSnetProbeReply.html#a43bf56a64ca4705517944e52f2c5b973" title="SnetProbeReply::GetRemote\lSeqNbr" alt="" coords="364,472,567,513"/>
+<area shape="rect" id="node16" href="$classSnetProbeReply.html#a64916e3e99b7681924135683e783d53d" title="SnetProbeReply::GetLocal\lSeqNbr" alt="" coords="372,537,559,578"/>
+<area shape="rect" id="node17" href="$classSnetPeerStatistic.html#a238d9a460bddd552e2ae92a957d0b7e0" title="SnetPeerStatistic::\lDeserialize" alt="" coords="397,602,533,644"/>
+<area shape="rect" id="node18" href="$classSnetPeerStatistic.html#a48c8a9e8cef022d6f84c446dabd8900d" title="SnetPeerStatistic::\lGetLocalGeneration" alt="" coords="390,668,541,709"/>
+<area shape="rect" id="node19" href="$classSnetPeerStatistic.html#a1f3a3f8b81f7b8bafdabc4c356efc88c" title="SnetPeerStatistic::\lGetAmountOfPackets" alt="" coords="387,733,544,774"/>
+<area shape="rect" id="node20" href="$classStatistic.html#a5398489c66fb0cdac079fb565d38ebc0" title="Statistic::Reset" alt="" coords="408,799,523,826"/>
+<area shape="rect" id="node21" href="$classStatistic.html#aac7f1a6400f7770b32544d5fd16530f8" title="Statistic::Update" alt="" coords="404,850,527,876"/>
+<area shape="rect" id="node22" href="$classSnetProbeRequest.html#a20033cadbb2568a1278a55f4b1a1beb5" title="SnetProbeRequest::SetLocalSeed" alt="" coords="348,900,583,927"/>
+<area shape="rect" id="node23" href="$classSnetProbeRequest.html#ad385bfebf706a50c357412820902637b" title="SnetProbeRequest::SetLocal\lSeqNbr" alt="" coords="365,952,566,993"/>
+<area shape="rect" id="node24" href="$classHdlcdClient.html#ab7fdcd25b70b9a707ef63bc697078e82" title="Send a single data packet to the peer entity. " alt="" coords="399,1018,532,1044"/>
+<area shape="rect" id="node25" href="$classHdlcdPacketData.html#a6f0ef5f8f9b4ed08c1b6b27b3b67fba2" title="HdlcdPacketData::CreatePacket" alt="" coords="354,1068,577,1095"/>
+<area shape="rect" id="node26" href="$classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b" title="SnetProbeRequest::Serialize" alt="" coords="365,1119,565,1146"/>
+<area shape="rect" id="node29" href="$classSnetProbeRequest.html#ab3db0b481b791f8ad9d7d5382e01f573" title="SnetProbeRequest::GetSize" alt="" coords="367,1170,563,1196"/>
+<area shape="rect" id="node6" href="$classSnetPacket.html#af6a6cff7f3afcbc8e75139965e6e2f38" title="SnetPacket::Deserialize" alt="" coords="893,319,1064,346"/>
+<area shape="rect" id="node27" href="$classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282" title="SnetAppMessage::Serialize" alt="" coords="643,1119,837,1146"/>
+<area shape="rect" id="node28" href="$classSnetPacket.html#a194b1bdf7f976c39b36882f30eb94a7a" title="SnetPacket::Serialize" alt="" coords="901,1119,1056,1146"/>
+<area shape="rect" id="node30" href="$classSnetAppMessage.html#accca0148425b17f4311ef81f56567e52" title="SnetAppMessage::GetSize" alt="" coords="645,1170,835,1196"/>
+<area shape="rect" id="node31" href="$classSnetPacket.html#a9e4a12efa65c42ef5f5b767a3e8f3fad" title="SnetPacket::GetSize" alt="" coords="903,1170,1054,1196"/>
+</map>

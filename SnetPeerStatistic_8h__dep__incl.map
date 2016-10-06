@@ -1,4 +1,4 @@
-<map id="src/tools/snet&#45;streamtestclient/SnetPeerStatistic.h" name="src/tools/snet&#45;streamtestclient/SnetPeerStatistic.h">
-<area shape="rect" id="node2" href="$StreamTestEntity_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="5,95,215,136"/>
-<area shape="rect" id="node3" href="$snet-streamtestclient_2main_8cpp.html" title="src/tools/snet&#45;streamtestclient\l/main.cpp" alt="" coords="5,184,215,225"/>
+<map id="src/snet&#45;streamtestclient/SnetPeerStatistic.h" name="src/snet&#45;streamtestclient/SnetPeerStatistic.h">
+<area shape="rect" id="node2" href="$StreamTestEntity_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="26,95,201,136"/>
+<area shape="rect" id="node3" href="$main-snet-streamtestclient_8cpp.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="5,184,221,225"/>
 </map>

@@ -1,9 +1,12 @@
 <map id="SnetPacket::Serialize" name="SnetPacket::Serialize">
-<area shape="rect" id="node2" href="$classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282" title="SnetAppMessage::Serialize" alt="" coords="208,78,403,105"/>
+<area shape="rect" id="node2" href="$classSnetAppMessage.html#ae17d90b06081556f8fe4361f25705282" title="SnetAppMessage::Serialize" alt="" coords="208,143,403,170"/>
 <area shape="rect" id="node3" href="$classSnetServiceMessage.html#aeb1983c322915642b6043bb57c646e9c" title="SnetServiceMessage\l::Serialize" alt="" coords="473,5,629,47"/>
 <area shape="rect" id="node4" href="$classSnetPlatformRequest.html#a5c51d36bce2fb5747ba002053be49824" title="SnetPlatformRequest\l::Serialize" alt="" coords="473,71,628,112"/>
-<area shape="rect" id="node6" href="$classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b" title="SnetProbeRequest::Serialize" alt="" coords="451,138,651,165"/>
-<area shape="rect" id="node5" href="$classFloodingPacketSource.html#abe098e6dc46322b44cdb0e0cdc78c1d2" title="FloodingPacketSource\l::FloodingPacketSource" alt="" coords="703,68,873,109"/>
-<area shape="rect" id="node7" href="$classStreamTestEntity.html#a819ba1d4c3cd151e49ca2b2b0ce93168" title="StreamTestEntity::Packet\lReceived" alt="" coords="699,133,877,175"/>
-<area shape="rect" id="node8" href="$snet-streamtestclient_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="925,141,977,167"/>
+<area shape="rect" id="node7" href="$classSnetPeerStatistic.html#aa998c24b17abb3fd84223934226f96e2" title="SnetPeerStatistic::\lSerialize" alt="" coords="483,136,619,177"/>
+<area shape="rect" id="node8" href="$classSnetProbeReply.html#a1ddea8387d070caa51c79d4fab90c9aa" title="SnetProbeReply::Serialize" alt="" coords="459,202,643,229"/>
+<area shape="rect" id="node9" href="$classSnetProbeRequest.html#af822966263409c386a9a16f36050a34b" title="SnetProbeRequest::Serialize" alt="" coords="451,253,651,279"/>
+<area shape="rect" id="node5" href="$classFloodingPacketSource.html#aeb3538b740562a58345605e38a7b2315" title="FloodingPacketSource\l::Start" alt="" coords="701,71,863,112"/>
+<area shape="rect" id="node6" href="$main-snet-flooder_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="913,78,965,105"/>
+<area shape="rect" id="node10" href="$classStreamTestEntity.html#a479ce135e547fe95b32f5ad2850f4a18" title="StreamTestEntity::Start" alt="" coords="699,253,865,279"/>
+<area shape="rect" id="node11" href="$main-snet-streamtestclient_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="913,253,965,279"/>
 </map>

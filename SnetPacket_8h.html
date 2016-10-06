@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>s-net-Tools: src/include/SnetPacket.h File Reference</title>
+<title>s-net-Tools: libs/snet-devel/src/SnetPacket.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,30 +115,31 @@ $(document).ready(function(){initNavTree('SnetPacket_8h.html','');});
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SnetPacket.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="SnetPacket_8h__incl.png" border="0" usemap="#src_2include_2SnetPacket_8h" alt=""/></div>
-<map name="src_2include_2SnetPacket_8h" id="src_2include_2SnetPacket_8h">
+<div class="center"><img src="SnetPacket_8h__incl.png" border="0" usemap="#libs_2snet-devel_2src_2SnetPacket_8h" alt=""/></div>
+<map name="libs_2snet-devel_2src_2SnetPacket_8h" id="libs_2snet-devel_2src_2SnetPacket_8h">
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="SnetPacket_8h__dep__incl.png" border="0" usemap="#src_2include_2SnetPacket_8hdep" alt=""/></div>
-<map name="src_2include_2SnetPacket_8hdep" id="src_2include_2SnetPacket_8hdep">
-<area shape="rect" id="node2" href="SnetAppMessage_8h.html" title="Copyright (c) 2016, Florian Evers, florian&#45;evers@gmx.de All rights reserved. " alt="" coords="461,80,677,107"/>
-<area shape="rect" id="node3" href="SnetServiceMessage_8h.html" title="Copyright (c) 2016, Florian Evers, florian&#45;evers@gmx.de All rights reserved. " alt="" coords="5,162,244,189"/>
-<area shape="rect" id="node6" href="SnetPlatformRequest_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="269,155,439,196"/>
-<area shape="rect" id="node9" href="SnetProbeRequest_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="464,155,673,196"/>
-<area shape="rect" id="node12" href="SnetProbeReply_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="697,155,907,196"/>
-<area shape="rect" id="node13" href="SnetPeerStatistic_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="931,155,1140,196"/>
-<area shape="rect" id="node4" href="SnetPacketPrinter_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="41,244,208,285"/>
-<area shape="rect" id="node5" href="snet-dissector_2main_8cpp.html" title="src/tools/snet&#45;dissector\l/main.cpp" alt="" coords="41,333,208,375"/>
-<area shape="rect" id="node7" href="FloodingPacketSource_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="265,244,443,285"/>
-<area shape="rect" id="node8" href="snet-flooder_2main_8cpp.html" title="src/tools/snet&#45;flooder\l/main.cpp" alt="" coords="277,333,431,375"/>
-<area shape="rect" id="node10" href="StreamTestEntity_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="697,244,907,285"/>
-<area shape="rect" id="node11" href="snet-streamtestclient_2main_8cpp.html" title="src/tools/snet&#45;streamtestclient\l/main.cpp" alt="" coords="697,333,907,375"/>
+<div class="center"><img src="SnetPacket_8h__dep__incl.png" border="0" usemap="#libs_2snet-devel_2src_2SnetPacket_8hdep" alt=""/></div>
+<map name="libs_2snet-devel_2src_2SnetPacket_8hdep" id="libs_2snet-devel_2src_2SnetPacket_8hdep">
+<area shape="rect" id="node2" href="SnetAppMessage_8h.html" title="Copyright (c) 2016, Florian Evers, florian&#45;evers@gmx.de All rights reserved. " alt="" coords="447,95,596,136"/>
+<area shape="rect" id="node3" href="SnetPlatformRequest_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="5,184,211,225"/>
+<area shape="rect" id="node6" href="SnetProbeRequest_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="235,184,410,225"/>
+<area shape="rect" id="node9" href="SnetProbeReply_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="434,184,609,225"/>
+<area shape="rect" id="node10" href="SnetPeerStatistic_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="633,184,807,225"/>
+<area shape="rect" id="node11" href="SnetServiceMessage_8h.html" title="Copyright (c) 2016, Florian Evers, florian&#45;evers@gmx.de All rights reserved. " alt="" coords="832,184,1003,225"/>
+<area shape="rect" id="node4" href="FloodingPacketSource_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="19,273,197,315"/>
+<area shape="rect" id="node5" href="main-snet-flooder_8cpp.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="31,363,185,404"/>
+<area shape="rect" id="node7" href="StreamTestEntity_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="434,273,609,315"/>
+<area shape="rect" id="node8" href="main-snet-streamtestclient_8cpp.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="413,363,629,404"/>
+<area shape="rect" id="node12" href="SnetPacketPrinter_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="842,273,993,315"/>
+<area shape="rect" id="node13" href="main-snet-dissector_8cpp.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="830,363,1005,404"/>
 </map>
 </div>
 </div>
@@ -170,7 +171,7 @@ specific prior written permission.
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="SnetPacket_8h.html">SnetPacket.h</a></li>
+    <li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_07f93fa6a62d42bcc9c0036884d167b8.html">snet-devel</a></li><li class="navelem"><a class="el" href="dir_3b8fa9c1a86a4bf6cb399ec296d29379.html">src</a></li><li class="navelem"><a class="el" href="SnetPacket_8h.html">SnetPacket.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

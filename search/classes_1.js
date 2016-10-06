@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['snetappmessage',['SnetAppMessage',['../classSnetAppMessage.html',1,'']]],
-  ['snetpacket',['SnetPacket',['../classSnetPacket.html',1,'']]],
-  ['snetpeerstatistic',['SnetPeerStatistic',['../classSnetPeerStatistic.html',1,'']]],
-  ['snetplatformrequest',['SnetPlatformRequest',['../classSnetPlatformRequest.html',1,'']]],
-  ['snetprobereply',['SnetProbeReply',['../classSnetProbeReply.html',1,'']]],
-  ['snetproberequest',['SnetProbeRequest',['../classSnetProbeRequest.html',1,'']]],
-  ['snetservicemessage',['SnetServiceMessage',['../classSnetServiceMessage.html',1,'']]],
-  ['statistic',['Statistic',['../classStatistic.html',1,'']]],
-  ['streamtestentity',['StreamTestEntity',['../classStreamTestEntity.html',1,'']]]
+  ['hdlcdclient',['HdlcdClient',['../classHdlcdClient.html',1,'']]],
+  ['hdlcdpacket',['HdlcdPacket',['../classHdlcdPacket.html',1,'']]],
+  ['hdlcdpacketctrl',['HdlcdPacketCtrl',['../classHdlcdPacketCtrl.html',1,'']]],
+  ['hdlcdpacketdata',['HdlcdPacketData',['../classHdlcdPacketData.html',1,'']]],
+  ['hdlcdpacketendpoint',['HdlcdPacketEndpoint',['../classHdlcdPacketEndpoint.html',1,'']]],
+  ['hdlcdsessiondescriptor',['HdlcdSessionDescriptor',['../classHdlcdSessionDescriptor.html',1,'']]],
+  ['hdlcdsessionheader',['HdlcdSessionHeader',['../classHdlcdSessionHeader.html',1,'']]]
 ];

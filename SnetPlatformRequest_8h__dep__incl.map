@@ -1,4 +1,4 @@
-<map id="src/tools/snet&#45;flooder/SnetPlatformRequest.h" name="src/tools/snet&#45;flooder/SnetPlatformRequest.h">
-<area shape="rect" id="node2" href="$FloodingPacketSource_8h.html" title="The hdlc&#45;tools implement the HDLC protocol to easily talk to devices connected via serial communicati..." alt="" coords="5,95,184,136"/>
-<area shape="rect" id="node3" href="$snet-flooder_2main_8cpp.html" title="src/tools/snet&#45;flooder\l/main.cpp" alt="" coords="17,184,172,225"/>
+<map id="src/snet&#45;flooder/SnetPlatformRequest.h" name="src/snet&#45;flooder/SnetPlatformRequest.h">
+<area shape="rect" id="node2" href="$FloodingPacketSource_8h.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="19,95,197,136"/>
+<area shape="rect" id="node3" href="$main-snet-flooder_8cpp.html" title="A set of tools to exchange and handle packets of s&#45;net(r) devices via the HDLC Daemon. Copyright (C) 2016 Florian Evers, florian&#45;evers@gmx.de. " alt="" coords="31,184,185,225"/>
 </map>

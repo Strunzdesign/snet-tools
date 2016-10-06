@@ -5,5 +5,6 @@ var classSnetPeerStatistic =
     [ "GetAmountOfPackets", "classSnetPeerStatistic.html#a1f3a3f8b81f7b8bafdabc4c356efc88c", null ],
     [ "GetLocalGeneration", "classSnetPeerStatistic.html#a48c8a9e8cef022d6f84c446dabd8900d", null ],
     [ "GetLocalSeed", "classSnetPeerStatistic.html#a72788ef28ce3d6f425d51dadf8535149", null ],
-    [ "GetRemoteSeed", "classSnetPeerStatistic.html#a3847573fd8e6dcb527343fce211193b3", null ]
+    [ "GetRemoteSeed", "classSnetPeerStatistic.html#a3847573fd8e6dcb527343fce211193b3", null ],
+    [ "Serialize", "classSnetPeerStatistic.html#aa998c24b17abb3fd84223934226f96e2", null ]
 ];
