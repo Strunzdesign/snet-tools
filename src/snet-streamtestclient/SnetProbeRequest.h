@@ -27,7 +27,7 @@
 
 class SnetProbeRequest: public SnetAppMessage {
 public:
-    SnetProbeRequest(uint16_t a_UnicastSSA): SnetAppMessage(0x22, 0x22, 0x00, 0x4000, a_UnicastSSA, true), m_LocalSeed(0), m_LocalSeqNbr(0) {}
+    SnetProbeRequest(uint16_t a_SrcSSA, uint16_t a_DstSSA): SnetAppMessage(0x22, 0x22, 0x00, a_SrcSSA, a_DstSSA, true), m_LocalSeed(0), m_LocalSeqNbr(0) {}
     
     // Setters
     void SetLocalSeed  (uint32_t a_LocalSeed   = 0) { m_LocalSeed   = a_LocalSeed; }

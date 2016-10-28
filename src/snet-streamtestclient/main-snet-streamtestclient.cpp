@@ -20,6 +20,7 @@
  */
 
 #include "Config.h"
+#include <assert.h>
 #include <iostream>
 #include <boost/asio.hpp>
 #include <boost/program_options.hpp>
@@ -39,7 +40,9 @@ int main(int argc, char* argv[]) {
                               "  linux:   /dev/ttyUSB0@localhost:5001\n"
                               "  windows: //./COM1@example.com:5001")
             ("destination,d", boost::program_options::value<std::string>(),
-                              "the destination address (SSA) as a 16bit hex value, e.g., 3FF4")
+                              "the destination address (SSA) as a 16bit hex value, e.g., as 0x3FF4 or as 3FF4")
+            ("source,s",      boost::program_options::value<std::string>()->default_value("0x4000"),
+                              "the OPTIONAL source address (SSA) as a 16bit hex value, e.g., as 0xFFFE or FFFE")
         ;
 
         // Parse the command line
@@ -58,14 +61,14 @@ int main(int argc, char* argv[]) {
             std::cout << "Bug reports, feedback, admiration, abuse, etc, to: https://github.com/Strunzdesign/snet-tools" << std::endl;
             return 1;
         } // if
-        
+
         if (!l_VariablesMap.count("connect")) {
             std::cout << "snet-streamtestclient: you have to specify one device to connect to" << std::endl;
             std::cout << "snet-streamtestclient: Use --help for more information." << std::endl;
             return 1;
         } // if
-        
-        uint16_t l_UnicastSSA = 0x3FF4;
+
+        uint16_t l_DstSSA = 0x3FF4;
         if (!l_VariablesMap.count("destination")) {
             std::cout << "snet-streamtestclient: you have to specify the destination address (SSA)" << std::endl;
             std::cout << "snet-streamtestclient: Use --help for more information." << std::endl;
@@ -73,7 +76,16 @@ int main(int argc, char* argv[]) {
         } else {
             // Convert the provided hexadecimal SSA
             std::istringstream l_Converter(l_VariablesMap["destination"].as<std::string>());
-            l_Converter >> std::hex >> l_UnicastSSA;
+            l_Converter >> std::hex >> l_DstSSA;
+        } // else
+
+        uint16_t l_SrcSSA;
+        if (!l_VariablesMap.count("source")) {
+            assert(false);
+        } else {
+            // Convert the provided hexadecimal SSA
+            std::istringstream l_Converter(l_VariablesMap["source"].as<std::string>());
+            l_Converter >> std::hex >> l_SrcSSA;
         } // else
 
         // Install signal handlers
@@ -96,7 +108,7 @@ int main(int argc, char* argv[]) {
             l_HdlcdClient.SetOnClosedCallback([&l_IoService](){ l_IoService.stop(); });
 
             // Prepare input then connect
-            StreamTestEntity l_StreamTestEntity(l_HdlcdClient, l_UnicastSSA);
+            StreamTestEntity l_StreamTestEntity(l_HdlcdClient, l_SrcSSA, l_DstSSA);
             l_HdlcdClient.AsyncConnect(l_EndpointIterator, [&l_StreamTestEntity, &l_Signals](bool a_bSuccess) {
                 if (a_bSuccess) {
                     l_StreamTestEntity.Start();

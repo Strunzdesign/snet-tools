@@ -30,7 +30,7 @@
 
 class StreamTestEntity {
 public:
-    StreamTestEntity(HdlcdClient& a_HdlcdClient, uint16_t a_UnicastSSA): m_UnicastSSA(a_UnicastSSA), m_HdlcdClient(a_HdlcdClient), m_LocalSeqNbr(0), m_RemoteStatistic("remote      "), m_LocalStatistic("local       ") {
+    StreamTestEntity(HdlcdClient& a_HdlcdClient, uint16_t a_SrcSSA, uint16_t a_DstSSA): m_SrcSSA(a_SrcSSA), m_DstSSA(a_DstSSA), m_HdlcdClient(a_HdlcdClient), m_LocalSeqNbr(0), m_RemoteStatistic("remote      "), m_LocalStatistic("local       ") {
         // Init
         srand(::time(NULL));
         m_LocalSeed = rand();
@@ -51,8 +51,8 @@ private:
     void PacketReceived(const HdlcdPacketData& a_PacketData) {
         SnetAppMessage l_AppMessage;
         if (l_AppMessage.Deserialize(a_PacketData.GetData())) {
-            // Checks
-            if ((l_AppMessage.GetSrcSSA() == m_UnicastSSA) && (l_AppMessage.GetSrcServiceId() == 0x22) && (l_AppMessage.GetDstServiceId() == 0x22)) {
+            // Checks: Unicast SSAs must match, but do not try to distinguish streams if non-unicast addresses were used!
+            if (((l_AppMessage.GetSrcSSA() == m_DstSSA) || (m_DstSSA >= 0x3FF0)) && (l_AppMessage.GetSrcServiceId() == 0x22) && (l_AppMessage.GetDstServiceId() == 0x22)) {
                 if (l_AppMessage.GetToken() == 0x01) {
                     HandleProbeReply(a_PacketData);
                 } else if (l_AppMessage.GetToken() == 0x02) {
@@ -100,7 +100,7 @@ private:
 
     void SendNextProbeRequest() {
         // Create probe request
-        SnetProbeRequest l_ProbeRequest(m_UnicastSSA);
+        SnetProbeRequest l_ProbeRequest(m_SrcSSA, m_DstSSA);
         l_ProbeRequest.SetLocalSeed  (m_LocalSeed);
         l_ProbeRequest.SetLocalSeqNbr(m_LocalSeqNbr);
 
@@ -115,7 +115,8 @@ private:
     }
     
     // Members
-    uint16_t m_UnicastSSA;
+    uint16_t m_SrcSSA;
+    uint16_t m_DstSSA;
     uint32_t m_RemoteSeed;
     uint32_t m_LocalSeed;
     HdlcdClient& m_HdlcdClient;
